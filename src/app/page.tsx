@@ -2,7 +2,7 @@ import SectionContainer from "@components/common/containers/SectionContainer";
 
 import Main from "@components/common/main";
 import Footer from "@components/common/footer";
-import { Hero } from "@components/home/index";
+import { Hero, Insights } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
         <SectionContainer id="insights-section" className="bg-deepIndigoBlue">
           <ContentContainer>
             <div className="flex w-full h-full">
-              <h1 className="text-white m-auto">SERVICES</h1>
+              <Insights />
             </div>
           </ContentContainer>
         </SectionContainer>

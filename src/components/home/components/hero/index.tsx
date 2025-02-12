@@ -22,7 +22,7 @@ export default function Hero() {
             />
           </span>
         </h1>
-        <h2 className="text-2xl font-bold leading-snug flex-wrap font-poppins text-noBlack">
+        <h2 className="text-2xl font-bold leading-snug flex-wrap font-poppins text-deepIndigoBlue">
           Advocacia atual e humanizada, especialista em prevenir e solucionar
           conflitos.
         </h2>
