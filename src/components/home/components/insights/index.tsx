@@ -12,7 +12,7 @@ export default function Insights() {
 
         <div className="flex w-full lg:w-1/2 xl:w-1/4 py-4 lg:px-2">
           <div className="text-center p-6 bg-midBlack shadow-lg w-full rounded-md">
-            <h2 className="text-xl font-semibold mb-6 text-lightApricotSalmon text-lightApricotSalmon">
+            <h2 className="text-xl font-semibold mb-6 text-lightApricotSalmon">
               Público de Interesse
             </h2>
             <ul className="text-left mt-4 ml-4 list-disc">
