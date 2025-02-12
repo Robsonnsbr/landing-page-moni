@@ -26,7 +26,7 @@ export default function Hero() {
           Advocacia atual e humanizada, especialista em prevenir e solucionar
           conflitos.
         </h2>
-        <div className="flex items-center  justify-center w-60 h-12 bg-[#DEA172] rounded-full shadow-lg cursor-pointer opacity-90 hover:opacity-100 transition">
+        <div className="flex items-center  justify-center w-60 h-12 bg-success rounded-full shadow-lg cursor-pointer opacity-90 hover:opacity-100 transition">
           <span className="text-white font-semibold font-poppins">
             Falar com Especialistas
           </span>

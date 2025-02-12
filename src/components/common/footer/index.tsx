@@ -1,91 +1,98 @@
-import React, { HTMLAttributes } from "react";
 import ContentContainer from "@components/common/containers/ContentContainer";
-import SectionContainer from "../containers/SectionContainer";
+import Logo from "@components/common/Logo";
+import Image from "next/image";
+import moniInstagram from "@public/images/moni-instagram.png";
+import Link from "next/link";
+import LinkIconsFooter from "./components/LinkIconsFooter";
+import { getLink } from "@utils/getLinks";
+import SectionContainer from "@components/common/containers/SectionContainer";
 
-type FooterProps = HTMLAttributes<HTMLDivElement>;
+const linkInstagram = await getLink("instagram");
 
-const Footer = ({ ...rest }: FooterProps) => {
+const Footer = () => {
   return (
-    <footer {...rest} className="text-whiteSnow" id="footer">
-      <SectionContainer id="footer-section" className="!min-h-fit bg-blue">
-        <ContentContainer className="flex flex-col gap-12" id="footer-content">
-          <div className="flex flex-wrap gap-6 justify-center items-center text-white sm:py-16 w-full">
-            <div className="space-y-10 flex-1 min-w-[200px] max-w-[300px] text-center">
-              <h2 className="font-semibold text-lg">Sobre Nós</h2>
-              <ul>
-                <li>
-                  <a href="#" className="hover:text-accent">
-                    Quem somos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent">
-                    Nossa missão
-                  </a>
-                </li>
-              </ul>
+    <SectionContainer className="!min-h-fit bg-deepIndigoBlue text-whiteSnow">
+      <hr className="border-4 w-full border-lightApricotSalmon" />
+      <ContentContainer
+        className="overflow-visible my-10"
+        id="container-top-footer"
+      >
+        <ul className="w-full flex flex-col md:grid grid-cols-3 justify-between">
+          <li
+            className="flex flex-col gap-4 items-center md:items-start"
+            id="content-top-footer-contact"
+          >
+            <h3 className="text-2xl font-semibold text-white">
+              MONICHARA MOCCELIN
+              <span className="text-lightApricotSalmon">.</span>
+            </h3>
+            <div className="md:mb-7">
+              <p className="text-lightApricotSalmon font-raleway">
+                <strong>Telefone/Whatsapp:</strong> &#40;41&#41; 99808-3760
+              </p>
+              <p className="text-lightApricotSalmon font-raleway">
+                <strong>Telefone/Whatsapp:</strong> &#40;41&#41; 99948-3760
+              </p>
+              <p className="text-lightApricotSalmon font-raleway">
+                <strong>E-mail:</strong> monicharamoccelin.adv@gmail.com
+              </p>
             </div>
+            <LinkIconsFooter />
+          </li>
+          <li className="flex items-center justify-center">
+            <Logo width={300} height={170} logoWhite={true} />
+          </li>
 
-            <div className="space-y-10 flex-1 min-w-[200px] max-w-[300px] text-center">
-              <h2 className="font-semibold text-lg">Serviços</h2>
-              <ul>
-                <li>
-                  <a href="#" className="hover:text-accent">
-                    Consultoria
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent">
-                    Suporte Técnico
-                  </a>
-                </li>
-              </ul>
+          <li
+            className="flex flex-col gap-4 items-center md:items-end"
+            id="content-top-footer-contact"
+          >
+            <h3 className="text-2xl font-semibold text-white md:text-end">
+              ATENDIMENTO
+              <span className="text-lightApricotSalmon">.</span>
+            </h3>
+            <div className="flex flex-col md:items-end">
+              <p className="text-lightApricotSalmon font-raleway">
+                <strong>Horário de Atendimento:</strong>
+              </p>
+              <p className="text-lightApricotSalmon font-raleway">
+                <strong>Segunda a Sexta:</strong>{" "}
+                <span className="text-xl">09:00 - 18:00</span>
+              </p>
+              <p className="text-lightApricotSalmon font-raleway">
+                <strong>Sábado:</strong> Fechado
+              </p>
+              <p className="text-lightApricotSalmon font-raleway">
+                <strong>Domingo:</strong> Fechado
+              </p>
+              <div className="flex max-w-60 self-center md:self-end mt-4 md:mt-0 rounded-md  hover:scale-105 active:scale-100 active:border-white transition-all ease-linear duration-100">
+                <Link
+                  href={linkInstagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit"
+                >
+                  <Image
+                    src={moniInstagram}
+                    width={300}
+                    placeholder="blur"
+                    loading="lazy"
+                    alt="imagem-monichara-linkedIn"
+                  />
+                </Link>
+              </div>
             </div>
-
-            <div className="space-y-10 flex-1 min-w-[200px] max-w-[300px] text-center">
-              <h2 className="font-semibold text-lg">Redes Sociais</h2>
-              <ul>
-                <li>
-                  <a href="#" className="hover:text-accent">
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent">
-                    Instagram
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-10 flex-1  min-w-[200px] max-w-[300px] text-center">
-              <h2 className="font-semibold text-lg self-end">Contato</h2>
-              <ul>
-                <li>
-                  <a
-                    href="mailto:financialsiq@gmail.com"
-                    className="hover:text-accent"
-                  >
-                    financialsiq@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+554199539-8000" className="hover:text-accent">
-                    (41) 99539-8003
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </ContentContainer>
-        <div className="flex flex-col py-2 gap-2 text-center text-white bg-[#1E2337] w-full text-sm">
-          <p>
-            &copy;Copyright 2025 <strong>Moccelin Advogacia</strong> Todos os
-            direitos reservados.
-          </p>
-        </div>
-      </SectionContainer>
-    </footer>
+          </li>
+        </ul>
+      </ContentContainer>
+      <hr className="border-1 w-full border-lightApricotSalmon" />
+      <ContentContainer id="container-bottom-footer">
+        <p className="text-center  text-white w-full h-full text-xs py-4">
+          ©Copyright <strong>Monichara Moccelin</strong>. Todos direitos
+          reservados.
+        </p>
+      </ContentContainer>
+    </SectionContainer>
   );
 };
 

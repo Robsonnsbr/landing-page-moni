@@ -14,14 +14,19 @@ html {
 }
 
 :root {
---deepIndigoBlue: #161B2E;
---mediumBlueGray: #343e5c;
---lightBlueGray: #556B82;
+--deepIndigoBlue: #2A3E52;
+--mediumBlueGray: #465866;
+--lightBlueGray: #5C6F7E;
+--extraLightBlueGray: #A2A7BA;
+--LightGray: #CFD3D8;
+--deepApricotSalmon: #ff664b;
+--mediumApricotSalmon: #ff8c78;
 --lightApricotSalmon: #DEA172;
---extraLightBlueGray: #c6d7e7d0;
---success: #07d600;
+--success: #25D366;
 --active: #0091ff;
 --error: #F00;
+
+
 
   /* Alturas padrão de header e footer */
   --header-height: 64px; 
@@ -45,6 +50,17 @@ body {
 h1 {
   font-size: 3rem; /* 48px */
 }
+
+h1, h2, h3,h4, h5{
+  color: var(--deepIndigoBlue);
+  font-family: var(--font-raleway);
+ }
+
+p, label{
+  color: var(--deepIndigoBlue);
+  font-family: var(--font-open-sans);
+}
+
 
 
 /* Limitar largura de imagens */
@@ -79,5 +95,11 @@ h1 {
     padding: 16px;
     text-align: center;
   }
+
+  .class-link-icon {
+    box-shadow: 1px 1px 3px 1px #00000024;
+    @apply text-white flex items-center justify-center bg-lightBlueGray p-2 rounded-full transition-all ease-linear duration-100  hover:bg-lightApricotSalmon active:scale-95 active:bg-black;
+  }
+  
 
 }

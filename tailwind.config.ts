@@ -33,6 +33,8 @@ export default {
         deepIndigoBlue: "var(--deepIndigoBlue)",
         mediumBlueGray: "var(--mediumBlueGray)",
         lightBlueGray: "var(--lightBlueGray)",
+        LightGray: "var(--LightGray)",
+        mediumApricotSalmon: "var(--mediumApricotSalmon)",
         lightApricotSalmon: "var(--lightApricotSalmon)",
         extraLightBlueGray: "var(--extraLightBlueGray)",
         success: "var(--success)",
