@@ -3,7 +3,7 @@ export const dynamic = "force-dynamic";
 export async function GET() {
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://moccelinadvocacia.com/landing-page";
+    "https://landing.moccelinadvocacia.com/";
 
   const robotsTxt = `
     User-agent: *
