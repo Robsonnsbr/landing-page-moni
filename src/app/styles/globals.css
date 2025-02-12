@@ -66,18 +66,6 @@ h1 {
     padding-bottom: var(--footer-height); 
     overflow: hidden;
   }
-  
-  /* Estilo do header fixo */
-  .header {
-    height: var(--header-height); /* Altura do header */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10; /* Garante que fique acima de outros elementos */
-    background-color: var(--color-bg); /* Fundo branco para o header */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombras sutis */
-  }
 
   /* Estilo do footer */
   .footer {
