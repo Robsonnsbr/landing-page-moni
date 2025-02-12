@@ -12,7 +12,6 @@ const linkInstagram = await getLink("instagram");
 const Footer = () => {
   return (
     <SectionContainer className="!min-h-fit bg-deepIndigoBlue text-whiteSnow">
-      <hr className="border-4 w-full border-lightApricotSalmon" />
       <ContentContainer
         className="overflow-visible my-10"
         id="container-top-footer"

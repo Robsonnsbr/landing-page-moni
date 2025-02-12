@@ -30,6 +30,7 @@ export default {
       colors: {
         background: "var(--color-bg)",
 
+        midBlack: "var(--midBlack)",
         deepIndigoBlue: "var(--deepIndigoBlue)",
         mediumBlueGray: "var(--mediumBlueGray)",
         lightBlueGray: "var(--lightBlueGray)",

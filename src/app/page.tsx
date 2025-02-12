@@ -17,7 +17,7 @@ export default function Home() {
       </SectionContainer>
 
       <Main>
-        <hr className="border-4 w-full border-lightApricotSalmon" />
+        <hr className="border-2 w-full border-lightApricotSalmon" />
         <SectionContainer id="insights-section" className="bg-deepIndigoBlue">
           <ContentContainer>
             <div className="flex w-full h-full">
@@ -26,7 +26,7 @@ export default function Home() {
           </ContentContainer>
         </SectionContainer>
 
-        <hr className="border-4 w-full border-lightApricotSalmon" />
+        <hr className="border-2 w-full border-lightApricotSalmon" />
         <SectionContainer id="customer-success-section" className="bg-white ">
           <ContentContainer>
             <div className="flex w-full h-full">
@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </ContentContainer>
         </SectionContainer>
-        <hr className="border-4 w-full border-lightApricotSalmon" />
+        <hr className="border-2 w-full border-lightApricotSalmon" />
 
         <SectionContainer id="form-block-section" className="bg-deepIndigoBlue">
           <ContentContainer>
@@ -43,16 +43,16 @@ export default function Home() {
             </div>
           </ContentContainer>
         </SectionContainer>
-        <hr className="border-4 w-full border-lightApricotSalmon" />
+        <hr className="border-2 w-full border-lightApricotSalmon" />
 
         <SectionContainer id="instructions-section" className="bg-white">
           <ContentContainer>
-            {" "}
             <div className="flex w-full h-full">
               <h1 className="text-deepIndigoBlue m-auto">REVIEWS</h1>
             </div>
           </ContentContainer>
         </SectionContainer>
+        <hr className="border-2 w-full border-lightApricotSalmon" />
       </Main>
       <Footer />
     </>
