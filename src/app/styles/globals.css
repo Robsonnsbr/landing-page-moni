@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset e estilos iniciais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; /* Tamanho base */
+}
+
+:root {
+--deepIndigoBlue: #161B2E;
+--mediumBlueGray: #343e5c;
+--lightBlueGray: #556B82;
+--lightApricotSalmon: #DEA172;
+--extraLightBlueGray: #c6d7e7d0;
+--success: #07d600;
+--active: #0091ff;
+--error: #F00;
+
+  /* Alturas padrão de header e footer */
+  --header-height: 64px; 
+  --footer-height: 200px; 
+  --line-height: 1.5; 
+  --font-size-base: 16px; 
+}
+
+/* Fontes e cores do body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-dark);
+  line-height: var(--line-height);
+  font-size: var(--font-size-base);
+  display: flex;
+  justify-content: center;
+  background: var(--color-dark);
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3rem; /* 48px */
+}
+
+
+/* Limitar largura de imagens */
+@layer base {
+  img {
+      width: auto;
+      height: auto;
+  }
+}
+
+/* Utilitários personalizados para Tailwind */
+@layer utilities {
+  
+  /* Contêiner do conteúdo principal */
+  .main-content {
+    width: 90%;
+    flex-grow: 1; 
+    padding-top: var(--header-height); 
+    padding-bottom: var(--footer-height); 
+    overflow: hidden;
+  }
+  
+  /* Estilo do header fixo */
+  .header {
+    height: var(--header-height); /* Altura do header */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Garante que fique acima de outros elementos */
+    background-color: var(--color-bg); /* Fundo branco para o header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombras sutis */
+  }
+
+  /* Estilo do footer */
+  .footer {
+    width: 100%;
+    min-height: var(--footer-height);
+    background-color: var(--color-mid-dark);
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    text-align: center;
+  }
+
+}
