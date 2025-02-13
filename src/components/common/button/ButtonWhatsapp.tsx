@@ -7,7 +7,7 @@ function ButtonWhatsapp({ label }: { label: string }) {
   const [linkWhatsappSecondary, setLinkWhatsappSecondary] = useState("#");
 
   useEffect(() => {
-    getLink("whatsappSecondary").then(setLinkWhatsappSecondary);
+    getLink("whatsappFirst").then(setLinkWhatsappSecondary);
   }, []);
 
   return (
