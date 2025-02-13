@@ -27,14 +27,14 @@ export default function Home() {
         <hr className="border-2 w-full border-lightApricotSalmon" />
         <SectionContainer id="insights-section" className="bg-deepIndigoBlue">
           <ContentContainer className="py-16 flex-col gap-6  items-center">
-            <AtendimentoJuridico />
+            <Especialidades />
           </ContentContainer>
         </SectionContainer>
 
         <hr className="border-2 w-full border-lightApricotSalmon" />
         <SectionContainer id="customer-success-section" className="bg-white ">
           <ContentContainer className="py-16 flex-col gap-6  items-center">
-            <Especialidades />
+            <AtendimentoJuridico />
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />
@@ -48,7 +48,7 @@ export default function Home() {
 
         <SectionContainer id="instructions-section" className="bg-white">
           <ContentContainer className="py-16 flex-col gap-6">
-            {/* TODO: entender o pq é lançado um erro no render no componente original */}
+            {/* TODO: entender o pq é lançado um erro no render no componente original, remove condition after fix*/}
             {process.env.NODE_ENV === "production" ? (
               <ElfSightWidget />
             ) : (

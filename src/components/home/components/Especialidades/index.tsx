@@ -5,7 +5,7 @@ export default function Especialidades() {
   return (
     <>
       <div>
-        <h3 className="text-3xl font-extrabold text-center uppercase text-deepIndigoBlue">
+        <h3 className="text-3xl font-extrabold text-center uppercase text-white">
           Atendimento Jurídico Exclusivo, Soluções Personalizadas
         </h3>
       </div>
@@ -15,18 +15,21 @@ export default function Especialidades() {
             key={category}
             className="flex-grow min-w-[200px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
           >
-            <div className=" text-center p-6 bg-deepIndigoBlue shadow-md w-full rounded-md flex flex-col h-full">
-              <h2 className="text-2xl font-semibold text-lightApricotSalmon">
+            <div className=" text-center p-6 bg-white shadow-md w-full rounded-md flex flex-col h-full">
+              <h2 className="text-2xl uppercase font-semibold text-lightApricotSalmon">
                 {category}
               </h2>
-              <ul className="mt-6 space-y-4 flex-grow ">
+              <ul className="mt-6 space-y-2 flex-grow ">
                 {services.map(({ title }) => (
                   <li key={title} className="flex flex-col">
-                    <h3 className="font-semibold">{title}</h3>
+                    <h3 className="font-semibold text-midBlack ">{title}</h3>
                   </li>
                 ))}
               </ul>
-              <Link href="/contato" className="mt-6 text-success">
+              <Link
+                href="/contato"
+                className="mt-6 text-success font-openSans font-semibold"
+              >
                 Saiba mais
               </Link>
             </div>
