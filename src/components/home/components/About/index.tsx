@@ -1,3 +1,5 @@
+import ButtonWhatsapp from "@components/common/button/ButtonWhatsapp";
+
 export default function PerfilAdvogada() {
   const info = {
     nome: "Monichara Moccelin",
@@ -50,11 +52,7 @@ export default function PerfilAdvogada() {
           </li>
         ))}
       </ul>
-      <div className="flex items-center  justify-center w-60 h-12 bg-success rounded-full shadow-lg cursor-pointer opacity-90 hover:opacity-100 transition">
-        <span className="text-white font-semibold font-poppins text-center">
-          QUERO FALAR AGORA COM UM ADVOGADO
-        </span>
-      </div>
+      <ButtonWhatsapp label={"QUERO FALAR AGORA COM UM ADVOGADO"} />
     </>
   );
 }
