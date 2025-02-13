@@ -10,7 +10,7 @@ import {
 import ContentContainer from "@components/common/containers/ContentContainer";
 import PerfilAdvogada from "@components/home/components/About";
 import GoogleCommentsSkeleton from "@components/home/components/Reviews/GoogleCommentsSkeleton";
-// import ElfSightWidget from "@components/home/components/Reviews/ElfSightWidget";
+import ElfSightWidget from "@components/home/components/Reviews/ElfSightWidget";
 
 export default function Home() {
   return (
@@ -48,9 +48,12 @@ export default function Home() {
 
         <SectionContainer id="instructions-section" className="bg-white">
           <ContentContainer className="py-16 flex-col gap-6">
-            <GoogleCommentsSkeleton />
             {/* TODO: entender o pq é lançado um erro no render no componente original */}
-            {/* <ElfSightWidget /> */}
+            {process.env.NODE_ENV === "production" ? (
+              <ElfSightWidget />
+            ) : (
+              <GoogleCommentsSkeleton />
+            )}
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />

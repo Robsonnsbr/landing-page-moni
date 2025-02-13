@@ -40,7 +40,7 @@ export default function PerfilAdvogada() {
             <h2 className="text-2xl font-semibold text-lightApricotSalmon">
               {section.title}
             </h2>
-            <ul className="mt-4 space-y-2 text-white text-md">
+            <ul className="mt-4 space-y-2 text-white text-md font-raleway font-semibold">
               {section.items.map((item, idx) => (
                 <li key={idx} className="px-4">
                   {item}
