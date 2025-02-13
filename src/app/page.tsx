@@ -8,6 +8,7 @@ import {
   Especialidades,
 } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
+import PerfilAdvogada from "@components/home/components/About";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
         <SectionContainer id="form-block-section" className="bg-deepIndigoBlue">
           <ContentContainer>
             <div className="flex w-full h-full">
-              <h1 className="text-white m-auto">ABOUT US</h1>
+              <PerfilAdvogada />
             </div>
           </ContentContainer>
         </SectionContainer>
