@@ -9,6 +9,7 @@ import {
 } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
 import PerfilAdvogada from "@components/home/components/About";
+import ElfSightWidget from "@components/home/components/Reviews/ElfSightWidget";
 
 export default function Home() {
   return (
@@ -48,9 +49,7 @@ export default function Home() {
 
         <SectionContainer id="instructions-section" className="bg-white">
           <ContentContainer>
-            <div className="flex w-full h-full">
-              <h1 className="text-deepIndigoBlue m-auto">REVIEWS</h1>
-            </div>
+            <ElfSightWidget />
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />
