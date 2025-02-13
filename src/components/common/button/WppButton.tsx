@@ -1,7 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
+
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-import consultanteAvatar from "@public/logos/avatar-hero.webp";
+import consultanteAvatar from "@public/images/avatar-moni.jpg";
+import { useEffect, useState } from "react";
 
 const WppButton = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,17 +23,17 @@ const WppButton = () => {
   if (!isLoaded) {
     return null;
   }
-
   return (
-    <div id="whatsapp-button" className="opacity-0 animate-fade-in absolute">
+    <div id="whatsapp-button-first">
       <FloatingWhatsApp
-        accountName="Robson"
-        phoneNumber="5541995398003"
+        accountName="Monichara Moccelin"
+        phoneNumber="554198083760"
         avatar={consultanteAvatar.src}
-        chatMessage="Olá! Tudo bem? Eu sou o Robson, consultor da IQ Financials. Como posso ajudar você hoje?"
+        chatMessage="Olá! Tudo bem? Eu sou a Monichara, advogada. Como posso ajudar você hoje?"
         statusMessage="Normalmente responde dentro de 1 hora"
         placeholder="Escrever mensagem..."
         chatboxHeight={360}
+        notificationDelay={15}
       />
     </div>
   );
