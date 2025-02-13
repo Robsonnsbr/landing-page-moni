@@ -1,6 +1,6 @@
 import ButtonWhatsapp from "@components/common/button/ButtonWhatsapp";
 
-export default function PerfilAdvogada() {
+export default function About() {
   const info = {
     nome: "Monichara Moccelin",
     oab: "OAB/PR 112.291",

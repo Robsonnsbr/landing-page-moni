@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { raleway, poppins, openSans } from "@font/index";
 import "./styles/globals.css";
 
-import WppButton from "@components/common/button/WppButton";
+import ButtonWhatsappFloat from "@components/common/button/ButtonWhatsappFloat";
 
 export const metadata: Metadata = {
   title: "Moccelin Advocacia",
@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${raleway.variable} ${poppins.variable} ${openSans.variable} font-sans`}
       >
         {children}
-        <WppButton />
+        <ButtonWhatsappFloat />
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import consultanteAvatar from "@public/images/avatar-moni.jpg";
 import { useEffect, useState } from "react";
 
-const WppButton = () => {
+const ButtonWhatsappFloat = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -39,4 +39,4 @@ const WppButton = () => {
   );
 };
 
-export default WppButton;
+export default ButtonWhatsappFloat;
