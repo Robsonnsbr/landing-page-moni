@@ -1,4 +1,3 @@
-import ContentContainer from "@components/common/containers/ContentContainer";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { LiaMoneyCheckAltSolid } from "react-icons/lia";
 import { GiConversation } from "react-icons/gi";
@@ -18,7 +17,7 @@ export default function AtendimentoJuridico() {
   ];
 
   return (
-    <ContentContainer className="flex flex-col gap-6">
+    <>
       <div>
         <h3 className="text-3xl font-extrabold text-center text-lightApricotSalmon uppercase">
           Atendimento Jurídico Exclusivo, Soluções Personalizadas
@@ -38,6 +37,6 @@ export default function AtendimentoJuridico() {
           </Link>
         ))}
       </div>
-    </ContentContainer>
+    </>
   );
 }

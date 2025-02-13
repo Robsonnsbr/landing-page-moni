@@ -1,5 +1,3 @@
-import ContentContainer from "@components/common/containers/ContentContainer";
-
 export default function PerfilAdvogada() {
   const info = {
     nome: "Monichara Moccelin",
@@ -20,9 +18,9 @@ export default function PerfilAdvogada() {
   };
 
   return (
-    <ContentContainer className="flex flex-col gap-6 items-center">
+    <>
       <div className="text-center text-white">
-        <h1 className="text-3xl font-extrabold text-lightApricotSalmon">
+        <h1 className="text-3xl font-extrabold text-lightApricotSalmon uppercase tracking-wider">
           {info.nome}
         </h1>
         <p className="text-lg font-semibold text-lightApricotSalmon">
@@ -37,12 +35,12 @@ export default function PerfilAdvogada() {
         ].map((section, index) => (
           <li
             key={index}
-            className="bg-midBlack shadow-lg rounded-full flex-1 min-w-[280px] max-w-[400px] p-8 flex flex-col items-center text-center"
+            className=" border-2 border-midBlack shadow-lg rounded-md flex-1 min-w-[280px] max-w-[400px] p-8 flex flex-col items-center text-center"
           >
-            <h2 className="text-xl font-semibold text-lightApricotSalmon">
+            <h2 className="text-2xl font-semibold text-lightApricotSalmon">
               {section.title}
             </h2>
-            <ul className="mt-4 space-y-2 text-white text-sm">
+            <ul className="mt-4 space-y-2 text-white text-md">
               {section.items.map((item, idx) => (
                 <li key={idx} className="px-4">
                   {item}
@@ -57,6 +55,6 @@ export default function PerfilAdvogada() {
           QUERO FALAR AGORA COM UM ADVOGADO
         </span>
       </div>
-    </ContentContainer>
+    </>
   );
 }

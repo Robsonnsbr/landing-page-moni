@@ -9,7 +9,8 @@ import {
 } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
 import PerfilAdvogada from "@components/home/components/About";
-import ElfSightWidget from "@components/home/components/Reviews/ElfSightWidget";
+import GoogleCommentsSkeleton from "@components/home/components/Reviews/GoogleCommentsSkeleton";
+// import ElfSightWidget from "@components/home/components/Reviews/ElfSightWidget";
 
 export default function Home() {
   return (
@@ -25,31 +26,31 @@ export default function Home() {
       <Main>
         <hr className="border-2 w-full border-lightApricotSalmon" />
         <SectionContainer id="insights-section" className="bg-deepIndigoBlue">
-          <ContentContainer>
+          <ContentContainer className="py-16 flex-col gap-6  items-center">
             <AtendimentoJuridico />
           </ContentContainer>
         </SectionContainer>
 
         <hr className="border-2 w-full border-lightApricotSalmon" />
         <SectionContainer id="customer-success-section" className="bg-white ">
-          <ContentContainer>
+          <ContentContainer className="py-16 flex-col gap-6  items-center">
             <Especialidades />
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />
 
         <SectionContainer id="form-block-section" className="bg-deepIndigoBlue">
-          <ContentContainer>
-            <div className="flex w-full h-full">
-              <PerfilAdvogada />
-            </div>
+          <ContentContainer className="py-16 gap-6 flex-col items-center">
+            <PerfilAdvogada />
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />
 
         <SectionContainer id="instructions-section" className="bg-white">
-          <ContentContainer>
-            <ElfSightWidget />
+          <ContentContainer className="py-16 flex-col gap-6">
+            <GoogleCommentsSkeleton />
+            {/* TODO: entender o pq é lançado um erro no render no componente original */}
+            {/* <ElfSightWidget /> */}
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />

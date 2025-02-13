@@ -1,10 +1,9 @@
-import ContentContainer from "@components/common/containers/ContentContainer";
 import Link from "next/link";
 import { data } from "@data/specialtiesContentData";
 
 export default function Especialidades() {
   return (
-    <ContentContainer className="flex-col gap-6">
+    <>
       <div>
         <h3 className="text-3xl font-extrabold text-center uppercase text-deepIndigoBlue">
           Atendimento Jurídico Exclusivo, Soluções Personalizadas
@@ -34,6 +33,6 @@ export default function Especialidades() {
           </li>
         ))}
       </ul>
-    </ContentContainer>
+    </>
   );
 }
