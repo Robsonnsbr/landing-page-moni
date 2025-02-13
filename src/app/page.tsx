@@ -2,7 +2,11 @@ import SectionContainer from "@components/common/containers/SectionContainer";
 
 import Main from "@components/common/main";
 import Footer from "@components/common/footer";
-import { Hero, AtendimentoJuridico } from "@components/home/index";
+import {
+  Hero,
+  AtendimentoJuridico,
+  Especialidades,
+} from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
 
 export default function Home() {
@@ -27,9 +31,7 @@ export default function Home() {
         <hr className="border-2 w-full border-lightApricotSalmon" />
         <SectionContainer id="customer-success-section" className="bg-white ">
           <ContentContainer>
-            <div className="flex w-full h-full">
-              <h1 className="text-deepIndigoBlue m-auto">TEAM</h1>
-            </div>
+            <Especialidades />
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />

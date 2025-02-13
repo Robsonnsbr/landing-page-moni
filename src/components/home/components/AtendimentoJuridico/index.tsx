@@ -18,18 +18,18 @@ export default function AtendimentoJuridico() {
   ];
 
   return (
-    <ContentContainer className="flex flex-col  overflow-hidden 3xl:scale-105 gap-6">
+    <ContentContainer className="flex flex-col gap-6">
       <div>
         <h3 className="text-3xl font-extrabold text-center text-lightApricotSalmon uppercase">
           Atendimento Jurídico Exclusivo, Soluções Personalizadas
         </h3>
       </div>
-      <div className="flex flex-wrap text-white">
+      <div className="flex flex-wrap justify-center gap-6">
         {links.map(({ href, icon: Icon, text }) => (
           <Link
             key={href}
             href={href}
-            className="flex w-full lg:w-1/2 xl:w-1/4 p-4"
+            className="flex-grow min-w-[200px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
           >
             <div className="text-center p-6 bg-midBlack shadow-lg w-full rounded-md">
               <Icon className="m-auto size-24 fill-success" />
