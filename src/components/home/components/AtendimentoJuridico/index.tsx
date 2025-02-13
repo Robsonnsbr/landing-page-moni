@@ -32,7 +32,7 @@ export default function AtendimentoJuridico() {
             className="flex w-full lg:w-1/2 xl:w-1/4 p-4"
           >
             <div className="text-center p-6 bg-midBlack shadow-lg w-full rounded-md">
-              <Icon className="m-auto size-16 fill-success" />
+              <Icon className="m-auto size-24 fill-success" />
               <h2 className="text-2xl font-semibold mt-6">{text}</h2>
             </div>
           </Link>
