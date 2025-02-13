@@ -1,4 +1,5 @@
 import ButtonWhatsapp from "@components/common/button/ButtonWhatsapp";
+import Link from "next/link";
 
 export default function About() {
   const info = {
@@ -37,18 +38,30 @@ export default function About() {
         ].map((section, index) => (
           <li
             key={index}
-            className=" border-2 border-midBlack shadow-lg rounded-md flex-1 min-w-[280px] max-w-[400px] p-8 flex flex-col items-center text-center"
+            className="flex-grow min-w-[280px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
           >
-            <h2 className="text-2xl font-semibold text-lightApricotSalmon">
-              {section.title}
-            </h2>
-            <ul className="mt-4 space-y-2 text-white text-md font-raleway font-semibold">
-              {section.items.map((item, idx) => (
-                <li key={idx} className="px-4">
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="text-center p-6 bg-midBlack shadow-lg rounded-md flex flex-col h-full">
+              <h2 className="text-2xl font-semibold text-lightApricotSalmon">
+                {section.title}
+              </h2>
+
+              <ul className="mt-6 space-y-2 flex-grow flex flex-col justify-center">
+                {section.items.map((item, idx) => (
+                  <li key={idx} className="px-4 text-white font-semibold">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href="https://moccelinadvocacia.com/#ref-resumo-sobre"
+                target="_blank"
+                rel="noopener"
+                className="mt-6 text-success font-openSans font-semibold"
+              >
+                Saiba mais
+              </Link>
+            </div>
           </li>
         ))}
       </ul>

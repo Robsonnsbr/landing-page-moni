@@ -1,18 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useLink } from "@hooks/useLink";
 import Link from "next/link";
-import { getLink } from "src/utils/getLinks";
 
 function ButtonWhatsapp({ label }: { label: string }) {
-  const [linkWhatsappSecondary, setLinkWhatsappSecondary] = useState("#");
-
-  useEffect(() => {
-    getLink("whatsappFirst").then(setLinkWhatsappSecondary);
-  }, []);
+  const whatsappFirst = useLink("whatsappFirst");
 
   return (
     <Link
-      href={linkWhatsappSecondary}
+      href={whatsappFirst}
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center p-2 justify-center w-64 h-fit bg-success rounded-full shadow-lg cursor-pointer opacity-90 hover:opacity-100 transition"

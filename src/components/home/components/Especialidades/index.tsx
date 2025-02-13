@@ -10,7 +10,7 @@ export default function Especialidades() {
         </h3>
       </div>
       <ul className="flex flex-wrap justify-center gap-6">
-        {data.map(({ category, services }) => (
+        {data.map(({ category, services, slug }) => (
           <li
             key={category}
             className="flex-grow min-w-[200px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
@@ -27,7 +27,9 @@ export default function Especialidades() {
                 ))}
               </ul>
               <Link
-                href="/contato"
+                href={`http://moccelinadvocacia.com/especialidades/` + slug}
+                target="_blank"
+                rel="noopener"
                 className="mt-6 text-success font-openSans font-semibold"
               >
                 Saiba mais
