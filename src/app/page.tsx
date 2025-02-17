@@ -47,7 +47,7 @@ export default function Home() {
         <hr className="border-2 w-full border-lightApricotSalmon" />
 
         <SectionContainer id="instructions-section" className="bg-white">
-          <ContentContainer className="py-16 flex-col gap-6">
+          <ContentContainer className="flex-col gap-6">
             {/* TODO: entender o pq é lançado um erro no render no componente original, remove condition after fix*/}
             {process.env.NODE_ENV === "production" ? (
               <ElfSightWidget />
