@@ -1,7 +1,7 @@
-import ContentContainer from "@components/common/containers/ContentContainer";
-
 import Image from "next/image";
 import logoNomeMoni from "@public/logos/logo-nome-moni.webp";
+
+import ContentContainer from "@components/common/containers/ContentContainer";
 import ButtonWhatsapp from "@components/common/button/ButtonWhatsapp";
 
 export default function Hero() {
