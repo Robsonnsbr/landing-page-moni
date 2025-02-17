@@ -1,7 +1,7 @@
 "use client";
 
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-import consultanteAvatar from "@public/images/avatar-moni.jpg";
+import consultanteAvatar from "@public/images/avatar-moni.webp";
 import { useEffect, useState } from "react";
 
 const ButtonWhatsappFloat = () => {

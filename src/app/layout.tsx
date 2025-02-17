@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Advocacia atual e humanizada, especialista em prevenir e solucionar conflitos jurídicos com ética e eficiência.",
   keywords:
-    "advocacia, direito, solução de conflitos, consultoria jurídica, advogado",
+    "advocacia, Curitiba, Paraná, direito, solução de conflitos, consultoria jurídica, advogada, advogado",
 };
 
 export default function RootLayout({
@@ -25,6 +25,24 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta name="robots" content="index, follow" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon.ico" />
       </head>
       <body
         suppressHydrationWarning={true}
