@@ -27,7 +27,10 @@ export default function Hero() {
           Advocacia atual e humanizada, especialista em prevenir e solucionar
           conflitos.
         </h2>
-        <ButtonWhatsapp label={" Falar com Especialistas"} />
+        <ButtonWhatsapp
+          className="text-xl px-4 w-fit"
+          label={" Falar com Especialistas"}
+        />
       </div>
     </ContentContainer>
   );

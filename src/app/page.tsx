@@ -1,3 +1,5 @@
+import Image from "next/image";
+import imageMonichara from "@public/images/mochara-imagem.webp";
 import SectionContainer from "@components/common/containers/SectionContainer";
 
 import Main from "@components/common/main";
@@ -9,7 +11,6 @@ import {
   About,
 } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
-import GoogleCommentsSkeleton from "@components/home/components/Reviews/GoogleCommentsSkeleton";
 import ElfSightWidget from "@components/home/components/Reviews/ElfSightWidget";
 
 export default function Home() {
@@ -32,7 +33,10 @@ export default function Home() {
         </SectionContainer>
 
         <hr className="border-2 w-full border-lightApricotSalmon" />
-        <SectionContainer id="customer-success-section" className="bg-white ">
+        <SectionContainer
+          id="customer-success-section"
+          className="bg-LightGray "
+        >
           <ContentContainer className="py-16 flex-col gap-6  items-center">
             <AtendimentoJuridico />
           </ContentContainer>
@@ -46,14 +50,21 @@ export default function Home() {
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />
 
-        <SectionContainer id="instructions-section" className="bg-white">
-          <ContentContainer className="flex-col gap-6">
-            {/* TODO: entender o pq é lançado um erro no render no componente original, remove condition after fix*/}
-            {process.env.NODE_ENV === "production" ? (
-              <ElfSightWidget />
-            ) : (
-              <GoogleCommentsSkeleton />
-            )}
+        <SectionContainer
+          id="instructions-section"
+          className="bg-LightGray min-h-fit"
+        >
+          {/* TODO: entender o pq é lançado um erro no render no componente original, remove condition after fix*/}
+          <ContentContainer className="py-16 flex-col sm:flex-row items-center gap-6">
+            <ElfSightWidget className="flex-1 mb-6 sm:mb-0" />
+            <Image
+              src={imageMonichara}
+              placeholder="blur"
+              alt="imagem Monichara advocada"
+              width={612}
+              height={918}
+              className="sm:flex-1 max-w-[300px] h-auto rounded-md border-2 border-lightApricotSalmon shadow-md"
+            />
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />

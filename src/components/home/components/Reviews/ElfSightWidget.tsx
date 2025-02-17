@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Script from "next/script";
 
-const ElfSightWidget = () => {
+const ElfSightWidget = ({ className }: { className?: string }) => {
   const [loading, setLoading] = useState(true);
 
   return (
@@ -15,7 +15,7 @@ const ElfSightWidget = () => {
       />
       {!loading && (
         <div
-          className="elfsight-app-e5a0fcd2-90e3-4de8-88a4-4f3e24eb900b font-poppins"
+          className={`elfsight-app-e5a0fcd2-90e3-4de8-88a4-4f3e24eb900b font-poppins ${className}`}
           data-elfsight-app-lazy
         />
       )}

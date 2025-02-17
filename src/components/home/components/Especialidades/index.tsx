@@ -15,7 +15,7 @@ export default function Especialidades() {
             key={category}
             className="flex-grow min-w-[200px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
           >
-            <div className=" text-center p-6 bg-white shadow-md w-full rounded-md flex flex-col h-full">
+            <div className=" text-center p-6 bg-LightGray shadow-md w-full rounded-md flex flex-col h-full">
               <h2 className="text-2xl uppercase font-semibold text-lightApricotSalmon">
                 {category}
               </h2>
