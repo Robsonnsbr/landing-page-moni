@@ -7,7 +7,7 @@ const ElfSightWidget = ({ className }: { className?: string }) => {
 
   return (
     <>
-      {loading && <p>Carregando...</p>}
+      {loading && <p className="animate-pulse">Carregando Avaliações...</p>}
       <Script
         src="https://static.elfsight.com/platform/platform.js"
         async
