@@ -30,7 +30,7 @@ export default function Especialidades() {
                 href={`http://moccelinadvocacia.com/especialidades/` + slug}
                 target="_blank"
                 rel="noopener"
-                className="mt-6 text-success font-openSans font-semibold"
+                className="py-6 px-4 m-auto text-success font-openSans font-semibold hover:underline"
               >
                 Saiba mais
               </Link>

@@ -57,7 +57,7 @@ export default function About() {
                 href="https://moccelinadvocacia.com/#ref-resumo-sobre"
                 target="_blank"
                 rel="noopener"
-                className="mt-6 text-success font-openSans font-semibold"
+                className="py-6 px-4 text-success font-openSans font-semibold hover:underline"
               >
                 Saiba mais
               </Link>
