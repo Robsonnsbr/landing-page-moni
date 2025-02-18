@@ -4,10 +4,7 @@ import Image from "next/image";
 import moniInstagram from "@public/images/moni-instagram.png";
 import Link from "next/link";
 import LinkIconsFooter from "./components/LinkIconsFooter";
-import { getLink } from "@utils/getLinks";
 import SectionContainer from "@components/common/containers/SectionContainer";
-
-const linkInstagram = await getLink("instagram");
 
 const Footer = () => {
   return (
@@ -27,13 +24,32 @@ const Footer = () => {
             </h3>
             <div className="md:mb-7">
               <p className="text-lightApricotSalmon font-raleway">
-                <strong>Telefone/Whatsapp:</strong> &#40;41&#41; 99808-3760
+                <strong>Telefone/Whatsapp:</strong>{" "}
+                <a
+                  className="animate-pulse"
+                  href="https://api.whatsapp.com/send/?phone=554198083760"
+                >
+                  &#40;41&#41; 99808-3760
+                </a>
               </p>
               <p className="text-lightApricotSalmon font-raleway">
-                <strong>Telefone/Whatsapp:</strong> &#40;41&#41; 99948-3760
+                <strong>Telefone/Whatsapp:</strong>{" "}
+                <a
+                  className="animate-pulse"
+                  href="https://api.whatsapp.com/send/?phone=554199483760"
+                >
+                  &#40;41&#41; 99948-3760
+                </a>
               </p>
               <p className="text-lightApricotSalmon font-raleway">
-                <strong>E-mail:</strong> monicharamoccelin.adv@gmail.com
+                <strong>E-mail:</strong>
+                <a
+                  className="animate-pulse"
+                  href="mailto:monicharamoccelin.adv@gmail.com"
+                >
+                  {" "}
+                  monicharamoccelin.adv@gmail.com
+                </a>
               </p>
             </div>
             <LinkIconsFooter />
@@ -66,7 +82,7 @@ const Footer = () => {
               </p>
               <div className="flex max-w-60 self-center md:self-end mt-4 md:mt-0 rounded-md  hover:scale-105 active:scale-100 active:border-white transition-all ease-linear duration-100">
                 <Link
-                  href={linkInstagram}
+                  href="https://www.instagram.com/monimoccelin?igsh=MWFsbXN1cjh6aWsydw=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-fit"

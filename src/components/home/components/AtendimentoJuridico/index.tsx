@@ -1,13 +1,11 @@
-"use client";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { LiaMoneyCheckAltSolid } from "react-icons/lia";
 import { GiConversation } from "react-icons/gi";
 import { MdOutlineQuickreply } from "react-icons/md";
 import Link from "next/link";
-import { useLink } from "@hooks/useLink";
 
 export default function AtendimentoJuridico() {
-  const whatsappFirst = useLink("whatsappFirst");
+  const whatsappFirst = "https://api.whatsapp.com/send/?phone=554198083760";
 
   const links = [
     { href: whatsappFirst, icon: MdOutlineQuickreply, text: "Acesso Simples" },
