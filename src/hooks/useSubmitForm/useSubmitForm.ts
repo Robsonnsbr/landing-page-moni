@@ -94,6 +94,7 @@ export const useSubmitForm = () => {
         }
         setCaptcha(null);
       } catch (error) {
+        console.log("entrei aqui");
         setError(true);
         setTimeout(() => {
           setCaptcha(null);
@@ -113,10 +114,10 @@ export const useSubmitForm = () => {
     handleSubmit,
     setValue,
     RECAPTCHA_SITE_KEY,
-    isWasSend,
     isError,
     errors,
     isSubmitting,
+    isWasSend,
     option,
     handleOptionChange, // Função dentro do hook
     handlePhoneChange, // Função dentro do hook

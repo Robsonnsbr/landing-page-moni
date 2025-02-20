@@ -2,7 +2,6 @@ import Image from "next/image";
 import logoNomeMoni from "@public/logos/logo-nome-moni.webp";
 
 import ContentContainer from "@components/common/containers/ContentContainer";
-import ButtonWhatsapp from "@components/common/button/ButtonWhatsapp";
 import Form from "@components/common/form";
 
 export default function Hero() {
@@ -28,10 +27,6 @@ export default function Hero() {
           Advocacia atual e humanizada, especialista em prevenir e solucionar
           conflitos.
         </h2>
-        <ButtonWhatsapp
-          className="text-xl px-4 w-fit"
-          label={" Falar com Especialistas"}
-        />
       </div>
       {process.env.NODE_ENV === "production" ? null : <Form />}
     </ContentContainer>
