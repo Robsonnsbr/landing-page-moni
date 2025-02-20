@@ -1,13 +1,8 @@
-import React from 'react';
-import { FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import { FiInstagram } from 'react-icons/fi';
-import { BsGlobeAmericas } from 'react-icons/bs';
-import ButtonLink from 'src/components/common/Button/ButtonLink';
-import { getLink } from 'src/utils/getLinks';
-
-const linkWhatsappFirst = await getLink('whatsappFirst');
-const linkWhatsappSecondary = await getLink('whatsappSecondary');
+import React from "react";
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FiInstagram } from "react-icons/fi";
+import { BsGlobeAmericas } from "react-icons/bs";
 
 function InfoContact() {
   return (
@@ -18,15 +13,15 @@ function InfoContact() {
             <FaWhatsapp className="size-5" />
           </div>
           <span>
-            &#40;41&#41; 99808-3760{' '}
-            <ButtonLink
-              href={linkWhatsappFirst}
-              target={'_blank'}
+            &#40;41&#41; 99808-3760{" "}
+            <a
+              href="https://api.whatsapp.com/send/?phone=554198083760"
+              target={"_blank"}
               rel="noopener noreferrer"
               className="hover:text-lightApricotSalmon active:text-deepIndigoBlue animate-pulse"
             >
               (WhatsApp)
-            </ButtonLink>
+            </a>
           </span>
         </div>
       </li>
@@ -36,15 +31,15 @@ function InfoContact() {
             <FaWhatsapp className="size-5" />
           </div>
           <span>
-            &#40;41&#41; 99948-3760{' '}
-            <ButtonLink
-              href={linkWhatsappSecondary}
-              target={'_blank'}
+            &#40;41&#41; 99948-3760{" "}
+            <a
+              href="https://api.whatsapp.com/send/?phone=554199483760"
+              target={"_blank"}
               rel="noopener noreferrer"
               className="hover:text-lightApricotSalmon active:text-deepIndigoBlue animate-pulse"
             >
               (WhatsApp)
-            </ButtonLink>
+            </a>
           </span>
         </div>
       </li>
@@ -77,7 +72,7 @@ function InfoContact() {
           <div className="w-6">
             <BsGlobeAmericas className="size-5" />
           </div>
-          Rua Lysimaco Ferreira da Costa, 29 - Centro Cívico - Curitiba/PR{' '}
+          Rua Lysimaco Ferreira da Costa, 29 - Centro Cívico - Curitiba/PR{" "}
           <br />
           CEP: 80530-100
         </span>
