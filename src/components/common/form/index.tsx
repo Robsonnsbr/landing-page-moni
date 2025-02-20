@@ -25,12 +25,12 @@ const Form = () => {
         onSubmit={handleSubmit(handleSubmitForm)}
         className="flex h-fit max-w-[350px] flex-col gap-2 items-start bg-lightApricotSalmon p-4 rounded-md text-md text-midBlack"
       >
-        <h3 className="text-center text-wrap font-openSans font-semibold text-white uppercase">
-          Deixe seu contato e um especialista entrará em contato.
+        <h3 className="text-center text-wrap font-poppins font-semibold text-white">
+          Deixe seu contato e falaremos com você.
         </h3>
         <label
           htmlFor="name"
-          className="flex flex-row gap-2 font-raleway  font-semibold"
+          className="flex flex-wrap gap-2 font-raleway  font-semibold"
         >
           Nome
           <input
@@ -51,7 +51,7 @@ const Form = () => {
               type="radio"
               {...register("option")}
               value="email"
-              className="w-4 h-4 "
+              className="w-4 h-4 accent-lightBlueGray"
               defaultChecked={option === "email"}
               onChange={(e) => handleOptionChange(e, setOption, setValue)}
             />
@@ -63,7 +63,7 @@ const Form = () => {
               type="radio"
               {...register("option")}
               value="phone"
-              className="w-4 h-4"
+              className="w-4 h-4 accent-lightBlueGray"
               onChange={(e) => handleOptionChange(e, setOption, setValue)}
             />
             <span>WhatsApp</span>
@@ -92,7 +92,7 @@ const Form = () => {
             htmlFor="phone"
             className="flex flex-row gap-2 font-raleway  font-semibold"
           >
-            Telefone
+            Tel
             <input
               {...register("phone")}
               id="phone"
@@ -103,9 +103,10 @@ const Form = () => {
           </label>
         )}
 
+        {/* btn send */}
         <button
           type="submit"
-          className="font-raleway  font-semibold bg-mediumBlueGray p-1 rounded-md text-white"
+          className="font-raleway  font-semibold bg-mediumBlueGray px-2 py-1 shadow-sm rounded-md text-success"
         >
           Enviar
         </button>
@@ -114,6 +115,7 @@ const Form = () => {
         {optionError && (
           <p className="text-errorRed/60 text-sm">{optionError}</p>
         )}
+
         {/* aviso de enviado ou enviado/erro */}
         <p className="text-errorRed/60 text-sm">
           {isSubmitting ? (
