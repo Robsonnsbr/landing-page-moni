@@ -11,13 +11,13 @@ const NEXT_PUBLIC_EMAILJS_TEMPLATE_ID =
 export const sendEmail = async ({
   name,
   subject,
-  message,
+  phone,
   email,
 }: EmailProps) => {
   const templateParams = {
     from_name: name,
     subject: subject,
-    message: message,
+    phone: phone,
     email: email,
   };
 
