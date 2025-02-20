@@ -1,7 +1,7 @@
 export interface EmailProps {
-  name: string;
-  subject: string;
   option: "email" | "phone";
+  name: string;
   email?: string;
   phone?: string;
+  subject?: string;
 }

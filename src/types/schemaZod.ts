@@ -15,7 +15,10 @@ export const schemaZod = z
       .min(10, { message: "Telefone deve ter no mínimo 10 dígitos" })
       .or(z.literal(""))
       .optional(),
-    subject: z.string().optional(),
+    subject: z
+      .string()
+      .optional()
+      .default("landingPage: Pedido de contado do cliente"),
   })
   .refine((data) => (data.option === "email" ? !!data.email : !!data.phone), {
     message: "Forneça um email ou telefone conforme a opção escolhida",

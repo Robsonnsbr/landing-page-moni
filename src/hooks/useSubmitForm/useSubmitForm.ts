@@ -49,6 +49,7 @@ export const useSubmitForm = () => {
   };
 
   const handleSubmitForm = async (data: EmailProps) => {
+    console.log(data);
     console.log("entrei no handleSubmitForm");
     const { subject, name, email, phone } = data;
 

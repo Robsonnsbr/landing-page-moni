@@ -4,9 +4,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { schemaZod } from "src/types/schemaZod";
 import { FormDataProps } from "src/types/types";
+import { useSubmitForm } from "@hooks/useSubmitForm/useSubmitForm";
 
 const Form = () => {
   const [option, setOption] = useState<"email" | "phone">("email");
+  const { handleSubmitForm } = useSubmitForm();
 
   const {
     register,
@@ -16,10 +18,6 @@ const Form = () => {
   } = useForm<FormDataProps>({
     resolver: zodResolver(schemaZod),
   });
-
-  const onSubmit = (data: FormDataProps) => {
-    console.log(data);
-  };
 
   const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedOption = event.target.value as "email" | "phone";
@@ -52,7 +50,7 @@ const Form = () => {
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(handleSubmitForm)}
       className="flex flex-col gap-2 items-start bg-white"
     >
       <label htmlFor="name" className="flex flex-row gap-2">
@@ -93,9 +91,6 @@ const Form = () => {
         <label htmlFor="email" className="flex flex-row gap-2">
           Email
           <input {...register("email")} id="email" />
-          {/* {errors.email && (
-            <p className="text-errorRed/60 text-sm">{errors.email.message}</p>
-          )} */}
         </label>
       )}
 
@@ -106,11 +101,8 @@ const Form = () => {
             {...register("phone")}
             id="phone"
             placeholder="(99) 99999-9999"
-            onChange={handlePhoneChange} // Aplica a máscara
+            onChange={handlePhoneChange}
           />
-          {/* {errors.phone && (
-            <p className="text-errorRed/60 text-sm">{errors.phone.message}</p>
-          )} */}
         </label>
       )}
 
