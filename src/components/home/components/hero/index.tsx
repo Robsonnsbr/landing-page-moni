@@ -6,8 +6,8 @@ import Form from "@components/common/form";
 
 export default function Hero() {
   return (
-    <ContentContainer className="h-full w-full flex-col sm:flex-row">
-      <div className="flex flex-col m-auto gap-16 text-black font-poppins !text-center text-balance items-center">
+    <ContentContainer className="h-full w-full flex-col sm:gap-2 sm:flex-row">
+      <div className="flex flex-col sm:gap-16 gap-6 text-black font-poppins !text-center text-balance items-center">
         <h1 className="font-extrabold leading-none uppercase">
           <span className="font-raleway flex items-center justify-center">
             <span className="sr-only">Monichara Moccelin advocacia</span>

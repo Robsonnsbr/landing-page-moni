@@ -21,7 +21,7 @@ const Form = () => {
 
   return (
     <div
-      className={`flex flex-col h-full m-auto items-center justify-center gap-16 py-6 self-center transition-opacity ${
+      className={`flex flex-col h-full m-auto items-center justify-center sm:gap-16 gap-6 py-6 self-center transition-opacity ${
         isSubmitting ? "pointer-events-none opacity-50" : ""
       }`}
     >
@@ -82,7 +82,7 @@ const Form = () => {
         {option === "email" && (
           <label
             htmlFor="email"
-            className="flex flex-row gap-2 font-raleway  font-semibold  text-mediumBlueGray"
+            className="flex flex-wrap gap-2 font-raleway  font-semibold  text-mediumBlueGray "
           >
             Email
             <input
