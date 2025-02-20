@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { schemaZod } from "src/types/schemaZod";
@@ -7,8 +6,13 @@ import { FormDataProps } from "src/types/types";
 import { useSubmitForm } from "@hooks/useSubmitForm/useSubmitForm";
 
 const Form = () => {
-  const [option, setOption] = useState<"email" | "phone">("email");
-  const { handleSubmitForm } = useSubmitForm();
+  const {
+    handleSubmitForm,
+    handleOptionChange,
+    handlePhoneChange,
+    setOption,
+    option,
+  } = useSubmitForm();
 
   const {
     register,
@@ -19,66 +23,48 @@ const Form = () => {
     resolver: zodResolver(schemaZod),
   });
 
-  const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedOption = event.target.value as "email" | "phone";
-    setOption(selectedOption);
-
-    if (selectedOption === "email") {
-      setValue("phone", "");
-    } else {
-      setValue("email", "");
-    }
-  };
-
-  // Função para aplicar máscara ao telefone
-  const formatPhone = (value: string) => {
-    const numericValue = value.replace(/\D/g, "");
-
-    if (numericValue.length <= 10) {
-      return numericValue.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
-    } else {
-      return numericValue.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-    }
-  };
-
-  const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const maskedValue = formatPhone(event.target.value);
-    setValue("phone", maskedValue);
-  };
-
   const optionError = errors?.email?.message || errors?.phone?.message;
 
   return (
     <form
       onSubmit={handleSubmit(handleSubmitForm)}
-      className="flex flex-col gap-2 items-start bg-white"
+      className="flex flex-col gap-2 items-start bg-lightApricotSalmon p-4 m-4 rounded-md text-md text-midBlack"
     >
-      <label htmlFor="name" className="flex flex-row gap-2">
+      <h3 className="text-center text-wrap font-openSans font-semibold text-midBlack uppercase">
+        Deixe seu contato e um especialista entrará em contato.
+      </h3>
+      <label
+        htmlFor="name"
+        className="flex flex-row gap-2 font-raleway  font-semibold"
+      >
         Nome
-        <input {...register("name")} id="name" />
+        <input {...register("name")} id="name" className="p-1 capitalize" />
         {errors.name && (
           <p className="text-errorRed/60 text-sm">{errors.name.message}</p>
         )}
       </label>
+      <span className="font-raleway font-semibold text-midBlack">
+        Escolha a melhor forma de contato!
+      </span>
       <div className="flex flex-wrap gap-2 items-center">
-        <label className="flex items-center space-x-2">
+        <label className="flex items-center space-x-2 font-raleway  font-semibold">
           <input
             type="radio"
             {...register("option")}
             value="email"
             className="w-4 h-4"
-            onChange={handleOptionChange}
+            onChange={(e) => handleOptionChange(e, setOption, setValue)}
           />
           <span>Email</span>
         </label>
 
-        <label className="flex items-center space-x-2">
+        <label className="flex items-center space-x-2 font-raleway  font-semibold">
           <input
             type="radio"
             {...register("option")}
             value="phone"
             className="w-4 h-4"
-            onChange={handleOptionChange}
+            onChange={(e) => handleOptionChange(e, setOption, setValue)}
           />
           <span>WhatsApp</span>
         </label>
@@ -88,25 +74,36 @@ const Form = () => {
         )}
       </div>
       {option === "email" && (
-        <label htmlFor="email" className="flex flex-row gap-2">
+        <label
+          htmlFor="email"
+          className="flex flex-row gap-2 font-raleway  font-semibold"
+        >
           Email
           <input {...register("email")} id="email" />
         </label>
       )}
 
       {option === "phone" && (
-        <label htmlFor="phone" className="flex flex-row gap-2">
+        <label
+          htmlFor="phone"
+          className="flex flex-row gap-2 font-raleway  font-semibold"
+        >
           Telefone
           <input
             {...register("phone")}
             id="phone"
             placeholder="(99) 99999-9999"
-            onChange={handlePhoneChange}
+            onChange={(e) => handlePhoneChange(e, setValue)}
           />
         </label>
       )}
 
-      <button type="submit">Enviar</button>
+      <button
+        type="submit"
+        className="font-raleway  font-semibold bg-mediumBlueGray p-1 rounded-md text-white"
+      >
+        Enviar
+      </button>
 
       {/* Campo para exibir erros do Zod */}
       {optionError && <p className="text-errorRed/60 text-sm">{optionError}</p>}
