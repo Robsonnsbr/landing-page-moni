@@ -11,7 +11,7 @@ import {
   About,
 } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
-import ElfSightWidget from "@components/home/components/Reviews/ElfSightWidget";
+import TaggBoxWidget from "@components/home/components/Reviews/TaggBoxWidget";
 
 export default function Home() {
   return (
@@ -56,7 +56,7 @@ export default function Home() {
         >
           {/* TODO: entender o pq é lançado um erro no render no componente original, remove condition after fix*/}
           <ContentContainer className="py-16 flex-col sm:flex-row items-center gap-6">
-            <ElfSightWidget className="flex-1 mb-6 sm:mb-0" />
+            <TaggBoxWidget />
             <Image
               src={imageMonichara}
               placeholder="blur"
