@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { EmailProps } from "src/types/emailsType";
 import { schemaZod } from "src/types/schemaZod";
 import { FormDataProps } from "src/types/types";
+import { sendEmail } from "@services/sendEmail";
+import { validateRecaptcha } from "@services/validateRecaptcha";
 
 export const useSubmitForm = () => {
   const [isWasSend, setIsWasSend] = useState(false);
@@ -70,21 +72,29 @@ export const useSubmitForm = () => {
   };
 
   // Mock de envio de email (substitua quando for para produção)
-  const sendEmailMock = async (data: Partial<EmailProps>) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        console.log("Email enviado", data);
-        resolve(200); // Simula envio bem-sucedido
-      }, 3000);
-    });
-  };
+  // const sendEmailMock = async (data: Partial<EmailProps>) => {
+  //   return new Promise((resolve) => {
+  //     setTimeout(() => {
+  //       console.log("Email enviado", data);
+  //       resolve(200); // Simula envio bem-sucedido
+  //     }, 3000);
+  //   });
+  // };
 
   const handleSubmitForm = async (data: EmailProps) => {
     const { subject, name, email, phone } = data;
 
-    if (captcha || !RECAPTCHA_SITE_KEY) {
+    const isValid = await validateRecaptcha();
+    if (captcha || !isValid) {
       try {
-        const resultado = await sendEmailMock({ subject, name, email, phone });
+        // const resultado = await sendEmailMock({ subject, name, email, phone });
+        const resultado = await sendEmail({
+          subject,
+          name,
+          email,
+          phone,
+          option,
+        });
 
         if (resultado === 200) {
           setIsWasSend(true);

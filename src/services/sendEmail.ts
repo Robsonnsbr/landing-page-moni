@@ -16,9 +16,9 @@ export const sendEmail = async ({
 }: EmailProps) => {
   const templateParams = {
     from_name: name,
-    subject: subject,
-    phone: phone,
-    email: email,
+    subject: subject || "",
+    phone: phone || "",
+    email: email || "",
   };
 
   try {
