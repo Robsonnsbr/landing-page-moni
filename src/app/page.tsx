@@ -12,7 +12,6 @@ import {
 } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
 import ElfSightWidget from "@components/home/components/Reviews/ElfSightWidget";
-import Form from "@components/common/form/index";
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
         className="bg-hero-section"
       >
         <Hero />
-        {process.env.NODE_ENV === "production" ? null : <Form />}
       </SectionContainer>
 
       <Main>

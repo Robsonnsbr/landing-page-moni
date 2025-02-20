@@ -28,7 +28,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(handleSubmitForm)}
-      className="flex flex-col gap-2 items-start bg-lightApricotSalmon p-4 m-4 rounded-md text-md text-midBlack"
+      className="flex h-64 self-center flex-col gap-2 items-start bg-lightApricotSalmon p-4 m-4 rounded-md text-md text-midBlack"
     >
       <h3 className="text-center text-wrap font-openSans font-semibold text-midBlack uppercase">
         Deixe seu contato e um especialista entrará em contato.
@@ -38,7 +38,11 @@ const Form = () => {
         className="flex flex-row gap-2 font-raleway  font-semibold"
       >
         Nome
-        <input {...register("name")} id="name" className="p-1 capitalize" />
+        <input
+          {...register("name")}
+          id="name"
+          className="p-1 capitalize rounded-md"
+        />
         {errors.name && (
           <p className="text-errorRed/60 text-sm">{errors.name.message}</p>
         )}
@@ -52,7 +56,7 @@ const Form = () => {
             type="radio"
             {...register("option")}
             value="email"
-            className="w-4 h-4"
+            className="w-4 h-4 "
             onChange={(e) => handleOptionChange(e, setOption, setValue)}
           />
           <span>Email</span>
@@ -76,10 +80,10 @@ const Form = () => {
       {option === "email" && (
         <label
           htmlFor="email"
-          className="flex flex-row gap-2 font-raleway  font-semibold"
+          className="flex flex-row gap-2 font-raleway  font-semibold "
         >
           Email
-          <input {...register("email")} id="email" />
+          <input {...register("email")} id="email" className="p-1 rounded-md" />
         </label>
       )}
 
@@ -94,6 +98,7 @@ const Form = () => {
             id="phone"
             placeholder="(99) 99999-9999"
             onChange={(e) => handlePhoneChange(e, setValue)}
+            className="p-1 rounded-md"
           />
         </label>
       )}

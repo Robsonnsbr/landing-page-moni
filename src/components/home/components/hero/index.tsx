@@ -3,10 +3,11 @@ import logoNomeMoni from "@public/logos/logo-nome-moni.webp";
 
 import ContentContainer from "@components/common/containers/ContentContainer";
 import ButtonWhatsapp from "@components/common/button/ButtonWhatsapp";
+import Form from "@components/common/form";
 
 export default function Hero() {
   return (
-    <ContentContainer className="h-full w-full">
+    <ContentContainer className="h-full w-full flex-col sm:flex-row">
       <div className="flex flex-col m-auto gap-16 text-black font-poppins !text-center text-balance items-center">
         <h1 className="font-extrabold leading-none uppercase">
           <span className="font-raleway flex items-center justify-center">
@@ -32,6 +33,7 @@ export default function Hero() {
           label={" Falar com Especialistas"}
         />
       </div>
+      {process.env.NODE_ENV === "production" ? null : <Form />}
     </ContentContainer>
   );
 }
