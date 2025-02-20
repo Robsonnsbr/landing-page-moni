@@ -14,10 +14,10 @@ export default function Hero() {
             <Image
               alt="logo moccelin advocacia"
               src={logoNomeMoni}
-              width={1267}
-              height={606}
+              width={887}
+              height={424}
               loading="eager"
-              style={{ maxHeight: "350px", width: "auto" }}
+              style={{ maxHeight: "300px", width: "auto" }}
               placeholder="blur"
               priority={process.env.NODE_ENV === "production"}
             />
@@ -28,7 +28,7 @@ export default function Hero() {
           conflitos.
         </h2>
       </div>
-      {process.env.NODE_ENV === "production" ? null : <Form />}
+      <Form />
     </ContentContainer>
   );
 }
