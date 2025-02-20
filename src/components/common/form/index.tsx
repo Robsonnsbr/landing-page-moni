@@ -116,15 +116,17 @@ const Form = () => {
         )}
         {/* aviso de enviado ou enviado/erro */}
         <p className="text-errorRed/60 text-sm">
-          {isSubmitting
-            ? "Enviando..."
-            : isWasSend
-            ? "Enviado"
-            : isError
-            ? "Ops! Tente novamente mais tarde..."
-            : errors.name || errors.email || errors.phone
-            ? "Por favor, preencha todos os campos corretamente."
-            : ""}
+          {isSubmitting ? (
+            <span className="animate-pulse">Enviando...</span>
+          ) : isWasSend ? (
+            "Enviado"
+          ) : isError ? (
+            "Ops! Tente novamente mais tarde..."
+          ) : errors.name || errors.email || errors.phone ? (
+            "Por favor, preencha todos os campos corretamente."
+          ) : (
+            ""
+          )}
         </p>
       </form>
       <ButtonWhatsapp
