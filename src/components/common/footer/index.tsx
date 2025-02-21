@@ -55,7 +55,7 @@ const Footer = () => {
             <LinkIconsFooter />
           </li>
           <li className="flex items-center justify-center">
-            <Logo width={300} height={170} logoWhite={true} />
+            <Logo />
           </li>
 
           <li
