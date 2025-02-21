@@ -10,14 +10,14 @@ const NEXT_PUBLIC_EMAILJS_TEMPLATE_ID =
 
 export const sendEmail = async ({
   name,
-  subject,
+  // subject, // se for usar a plataforma Resend do react add subject
   phone,
   email,
   option,
 }: EmailProps) => {
   const templateParams = {
     from_name: name,
-    subject: subject || "",
+    // subject: subject || "", // se for usar a plataforma Resend do react add subject
     contato: phone || email,
     option,
   };
