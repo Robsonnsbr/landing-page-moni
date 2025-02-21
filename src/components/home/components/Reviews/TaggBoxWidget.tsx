@@ -14,9 +14,10 @@ const TaggBoxWidget = ({ className }: { className?: string }) => {
         onLoad={() => setLoading(false)}
       />
       <div
-        className={`taggbox w-full h-full font-poppins ${className}`}
+        className={`taggbox font-poppins w-full ${className}`}
         data-widget-id="2154917"
         data-tags="false"
+        lazy-loading="true"
       />
     </>
   );

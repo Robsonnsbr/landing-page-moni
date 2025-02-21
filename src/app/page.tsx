@@ -1,5 +1,3 @@
-import Image from "next/image";
-import imageMonichara from "@public/images/mochara-imagem.webp";
 import SectionContainer from "@components/common/containers/SectionContainer";
 
 import Main from "@components/common/main";
@@ -9,9 +7,9 @@ import {
   AtendimentoJuridico,
   Especialidades,
   About,
+  Reviews,
 } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
-import TaggBoxWidget from "@components/home/components/Reviews/TaggBoxWidget";
 
 export default function Home() {
   return (
@@ -33,10 +31,7 @@ export default function Home() {
         </SectionContainer>
 
         <hr className="border-2 w-full border-lightApricotSalmon" />
-        <SectionContainer
-          id="customer-success-section"
-          className="bg-LightGray "
-        >
+        <SectionContainer id="atendimento-section" className="bg-LightGray ">
           <ContentContainer className="py-16 flex-col gap-6  items-center">
             <AtendimentoJuridico />
           </ContentContainer>
@@ -51,20 +46,22 @@ export default function Home() {
         <hr className="border-2 w-full border-lightApricotSalmon" />
 
         <SectionContainer
-          id="instructions-section"
+          id="review-section"
           className="bg-LightGray min-h-fit"
         >
-          {/* TODO: entender o pq é lançado um erro no render no componente original, remove condition after fix*/}
-          <ContentContainer className="py-16 flex-col sm:flex-row items-center gap-6">
-            <TaggBoxWidget />
-            <Image
-              src={imageMonichara}
-              placeholder="blur"
-              alt="imagem Monichara advocada"
-              width={612}
-              height={918}
-              className="sm:flex-1 max-w-[300px] h-auto rounded-md border-2 border-lightApricotSalmon shadow-md"
-            />
+          <ContentContainer className="py-16 flex-col items-center gap-6">
+            <Reviews />
+            <h3 className="text-xl text-deepIndigoBlue font-semibold text-center">
+              Para mais informações, acesse:{" "}
+              <a
+                href="http://moccelinadvocacia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lightApricotSalmon"
+              >
+                moccelinadvocacia.com
+              </a>
+            </h3>
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />
