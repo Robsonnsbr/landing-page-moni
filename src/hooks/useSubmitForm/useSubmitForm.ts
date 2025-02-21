@@ -82,12 +82,19 @@ export const useSubmitForm = () => {
   // };
 
   const handleSubmitForm = async (data: EmailProps) => {
-    const { subject, name, email, phone } = data;
+    const { subject, name, email, phone, option } = data;
 
     const isValid = await validateRecaptcha();
+
     if (captcha || !isValid) {
       try {
-        // const resultado = await sendEmailMock({ subject, name, email, phone });
+        // const resultado = await sendEmailMock({
+        //   subject,
+        //   name,
+        //   email,
+        //   phone,
+        //   option,
+        // });
         const resultado = await sendEmail({
           subject,
           name,

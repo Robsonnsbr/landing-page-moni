@@ -13,12 +13,13 @@ export const sendEmail = async ({
   subject,
   phone,
   email,
+  option,
 }: EmailProps) => {
   const templateParams = {
     from_name: name,
     subject: subject || "",
-    phone: phone || "",
-    email: email || "",
+    contato: phone || email,
+    option,
   };
 
   try {
