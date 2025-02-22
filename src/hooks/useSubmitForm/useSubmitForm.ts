@@ -11,7 +11,7 @@ export const useSubmitForm = () => {
   const [isWasSend, setIsWasSend] = useState(false);
   const [isError, setError] = useState(false);
   const [RECAPTCHA_SITE_KEY, setRECAPTCHA_SITE_KEY] = useState("");
-  const [option, setOption] = useState<"email" | "phone">("email");
+  const [option, setOption] = useState<"email" | "phone">("phone");
 
   useEffect(() => {
     setRECAPTCHA_SITE_KEY(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "");
@@ -32,7 +32,7 @@ export const useSubmitForm = () => {
       email: "",
       phone: "",
       subject: "",
-      option: "email",
+      option: "phone",
     },
   });
 

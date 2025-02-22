@@ -55,22 +55,6 @@ const Form = () => {
         </span>
         <div className="flex flex-wrap gap-2 items-center">
           <label
-            className={`flex items-center font-raleway hover:cursor-pointer shadow-md  px-2 select-none active:scale-95  font-semibold text-mediumBlueGray rounded-md bg-extraLightBlueGray p-1 border-2 border-lightApricotSalmon ${
-              option === "email" ? "border-lightBlueGray" : ""
-            }`}
-          >
-            <input
-              type="radio"
-              {...register("option")}
-              value="email"
-              className="hidden"
-              defaultChecked={option === "email"}
-              onChange={(e) => handleOptionChange(e, setOption, setValue)}
-            />
-            <MdOutlineEmail className="size-7 self-center" />
-          </label>
-
-          <label
             className={`flex items-center  font-raleway shadow-md px-2 hover:cursor-pointer select-none active:scale-95 font-semibold text-mediumBlueGray rounded-md bg-success p-1 border-2 border-lightApricotSalmon ${
               option === "phone" ? "border-lightBlueGray" : ""
             }`}
@@ -80,9 +64,24 @@ const Form = () => {
               {...register("option")}
               value="phone"
               className="hidden"
+              defaultChecked={option === "phone"}
               onChange={(e) => handleOptionChange(e, setOption, setValue)}
             />
             <FaWhatsapp className="size-7 self-center" />
+          </label>
+          <label
+            className={`flex items-center font-raleway hover:cursor-pointer shadow-md  px-2 select-none active:scale-95 bg-LightGray  font-semibold text-mediumBlueGray rounded-md  p-1 border-2 border-lightApricotSalmon ${
+              option === "email" ? "border-lightBlueGray" : ""
+            }`}
+          >
+            <input
+              type="radio"
+              {...register("option")}
+              value="email"
+              className="hidden"
+              onChange={(e) => handleOptionChange(e, setOption, setValue)}
+            />
+            <MdOutlineEmail className="size-7 self-center" />
           </label>
 
           {errors.option && (
