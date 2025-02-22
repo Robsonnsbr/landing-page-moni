@@ -7,13 +7,18 @@ import ButtonWhatsappFloat from "@components/common/button/ButtonWhatsappFloat";
 
 export const metadata: Metadata = {
   title: "Moccelin Advocacia",
-  icons: {
-    icon: "/favicon.ico",
-  },
   description:
     "Advocacia atual e humanizada, especialista em prevenir e solucionar conflitos jurídicos com ética e eficiência.",
   keywords:
     "advocacia, Curitiba, Paraná, direito, solução de conflitos, consultoria jurídica, advogada, advogado",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +30,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta name="robots" content="index, follow" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

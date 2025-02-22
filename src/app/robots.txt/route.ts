@@ -8,6 +8,7 @@ export async function GET() {
   const robotsTxt = `
     User-agent: *
     Allow: /
+    Allow: /favicon.ico
     Sitemap: ${siteUrl}/sitemap.xml
   `;
 
