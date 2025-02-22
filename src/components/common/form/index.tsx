@@ -1,6 +1,8 @@
 "use client";
 import { useSubmitForm } from "@hooks/useSubmitForm/useSubmitForm";
 import ButtonWhatsapp from "../button/ButtonWhatsapp";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Form = () => {
   const {
@@ -49,30 +51,38 @@ const Form = () => {
           )}
         </label>
         <span className="font-raleway font-semibold text-mediumBlueGray">
-          Escolha a melhor forma de contato.
+          Escolha a melhor forma de contato:
         </span>
         <div className="flex flex-wrap gap-2 items-center">
-          <label className="flex items-center space-x-2 font-raleway  font-semibold text-mediumBlueGray ">
+          <label
+            className={`flex items-center font-raleway hover:cursor-pointer shadow-md  px-2 select-none active:scale-95  font-semibold text-mediumBlueGray rounded-md bg-extraLightBlueGray p-1 border-2 border-lightApricotSalmon ${
+              option === "email" ? "border-lightBlueGray" : ""
+            }`}
+          >
             <input
               type="radio"
               {...register("option")}
               value="email"
-              className="w-4 h-4 accent-lightBlueGray"
+              className="hidden"
               defaultChecked={option === "email"}
               onChange={(e) => handleOptionChange(e, setOption, setValue)}
             />
-            <span>Email</span>
+            <MdOutlineEmail className="size-7 self-center" />
           </label>
 
-          <label className="flex items-center space-x-2 font-raleway  font-semibold text-mediumBlueGray">
+          <label
+            className={`flex items-center  font-raleway shadow-md px-2 hover:cursor-pointer select-none active:scale-95 font-semibold text-mediumBlueGray rounded-md bg-success p-1 border-2 border-lightApricotSalmon ${
+              option === "phone" ? "border-lightBlueGray" : ""
+            }`}
+          >
             <input
               type="radio"
               {...register("option")}
               value="phone"
-              className="w-4 h-4 accent-lightBlueGray"
+              className="hidden"
               onChange={(e) => handleOptionChange(e, setOption, setValue)}
             />
-            <span>WhatsApp</span>
+            <FaWhatsapp className="size-7 self-center" />
           </label>
 
           {errors.option && (
@@ -82,7 +92,7 @@ const Form = () => {
         {option === "email" && (
           <label
             htmlFor="email"
-            className="flex flex-wrap gap-2 font-raleway  font-semibold  text-mediumBlueGray items-center"
+            className="flex flex-wrap gap-2 font-raleway  font-semibold  text-mediumBlueGray items-center "
           >
             Email
             <input
@@ -113,7 +123,7 @@ const Form = () => {
         {/* btn send */}
         <button
           type="submit"
-          className="font-raleway  font-semibold bg-mediumBlueGray py-1 shadow-md rounded-md w-full text-success opacity-95 hover:opacity-100 active:scale-95 transition-all duration-75"
+          className="font-raleway  font-semibold bg-mediumBlueGray py-1 text-xl shadow-md rounded-md w-full text-success opacity-95 hover:opacity-100 active:scale-95"
         >
           Enviar
         </button>
