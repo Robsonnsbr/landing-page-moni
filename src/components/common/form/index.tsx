@@ -152,6 +152,13 @@ const Form = () => {
             ""
           )}
         </p>
+        <a
+          href="./privacy-policy"
+          target="_blank"
+          className="self-end text-xs text-mediumBlueGray hover:underline"
+        >
+          Política de privacidade.
+        </a>
       </form>
       <ButtonWhatsapp
         className="text-xl px-4 w-fit order-first sm:order-none"
