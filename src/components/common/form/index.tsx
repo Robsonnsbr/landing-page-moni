@@ -112,9 +112,9 @@ const Form = () => {
             <input
               {...register("phone")}
               id="phone"
-              placeholder="(99) 99999-9999"
+              placeholder="ex: (41) 98000-0009"
               onChange={(e) => handlePhoneChange(e, setValue)}
-              className="p-1 rounded-md font-mono font-normal text-mediumBlueGray"
+              className="p-1 rounded-md font-openSans font-normal text-mediumBlueGray"
             />
           </label>
         )}
