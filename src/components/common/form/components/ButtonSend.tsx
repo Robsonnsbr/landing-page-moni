@@ -18,7 +18,6 @@ export const ButtonSend = ({
   ...props
 }: ButtonProps) => {
   const { firstAction, secondaryAction } = actionsNames;
-  console.log(actionsNames);
   return (
     <button
       type="submit"

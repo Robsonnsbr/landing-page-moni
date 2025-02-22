@@ -27,14 +27,14 @@ const Form = () => {
     >
       <form
         onSubmit={handleSubmit(handleSubmitForm)}
-        className="flex h-fit max-w-[350px] flex-col gap-2 items-start bg-lightApricotSalmon p-4 rounded-md text-md"
+        className="flex h-fit max-w-[350px] flex-col gap-4 items-start bg-lightApricotSalmon p-4 rounded-md text-md"
       >
         <h3 className="text-center text-wrap font-poppins font-semibold text-white">
           Deixe seu contato e falaremos com você!
         </h3>
         <label
           htmlFor="name"
-          className="flex flex-wrap gap-2 font-raleway  font-semibold text-mediumBlueGray"
+          className="flex flex-wrap gap-2 font-raleway  font-semibold text-mediumBlueGray items-center"
         >
           Nome
           <input
@@ -43,16 +43,16 @@ const Form = () => {
             className="p-1 capitalize rounded-md text-mediumBlueGray font-sans font-normal"
           />
           {errors.name && (
-            <p className="text-mediumBlueGray font-normal text-sm">
+            <p className="text-error  font-normal text-sm">
               {errors.name.message}
             </p>
           )}
         </label>
-        <span className="font-raleway font-semibold text-white">
+        <span className="font-raleway font-semibold text-mediumBlueGray">
           Escolha a melhor forma de contato.
         </span>
         <div className="flex flex-wrap gap-2 items-center">
-          <label className="flex items-center space-x-2 font-raleway  font-semibold text-mediumBlueGray">
+          <label className="flex items-center space-x-2 font-raleway  font-semibold text-mediumBlueGray ">
             <input
               type="radio"
               {...register("option")}
@@ -76,13 +76,13 @@ const Form = () => {
           </label>
 
           {errors.option && (
-            <p className="text-red-500 text-sm">{errors.option.message}</p>
+            <p className="text-error  text-sm">{errors.option.message}</p>
           )}
         </div>
         {option === "email" && (
           <label
             htmlFor="email"
-            className="flex flex-wrap gap-2 font-raleway  font-semibold  text-mediumBlueGray "
+            className="flex flex-wrap gap-2 font-raleway  font-semibold  text-mediumBlueGray items-center"
           >
             Email
             <input
@@ -97,7 +97,7 @@ const Form = () => {
         {option === "phone" && (
           <label
             htmlFor="phone"
-            className="flex flex-row gap-2 font-raleway  font-semibold text-mediumBlueGray"
+            className="flex flex-row gap-2 font-raleway  font-semibold text-mediumBlueGray items-center"
           >
             Tel
             <input
@@ -113,14 +113,14 @@ const Form = () => {
         {/* btn send */}
         <button
           type="submit"
-          className="font-raleway  font-semibold bg-mediumBlueGray px-2 py-1 shadow-sm rounded-md text-success"
+          className="font-raleway  font-semibold bg-mediumBlueGray py-1 shadow-md rounded-md w-full text-success opacity-95 hover:opacity-100 active:scale-95 transition-all duration-75"
         >
           Enviar
         </button>
 
         {/* Campo para exibir erros do Zod */}
         {optionError && (
-          <p className="text-errorRed/60 text-sm">{optionError}</p>
+          <p className="text-sm text-center text-error">{optionError}</p>
         )}
 
         {/* aviso de enviado ou enviado/erro */}
@@ -132,9 +132,13 @@ const Form = () => {
               Tudo enviado! Logo, a gente se fala!
             </span>
           ) : isError ? (
-            "Ops! Tente novamente mais tarde..."
+            <span className="text-error">
+              Ops! Tente novamente mais tarde...
+            </span>
           ) : errors.name || errors.email || errors.phone ? (
-            "Por favor, preencha todos os campos corretamente."
+            <span className="text-error">
+              Por favor, preencha todos os campos corretamente.
+            </span>
           ) : (
             ""
           )}

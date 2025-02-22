@@ -10,7 +10,6 @@ import { validateRecaptcha } from "@services/validateRecaptcha";
 export const useSubmitForm = () => {
   const [isWasSend, setIsWasSend] = useState(false);
   const [isError, setError] = useState(false);
-  const [captcha, setCaptcha] = useState<string | null>(null);
   const [RECAPTCHA_SITE_KEY, setRECAPTCHA_SITE_KEY] = useState("");
   const [option, setOption] = useState<"email" | "phone">("email");
 
@@ -32,6 +31,8 @@ export const useSubmitForm = () => {
       name: "",
       email: "",
       phone: "",
+      subject: "",
+      option: "email",
     },
   });
 
@@ -86,7 +87,7 @@ export const useSubmitForm = () => {
 
     const isValid = await validateRecaptcha();
 
-    if (captcha || !isValid) {
+    if (!isValid) {
       try {
         // const resultado = await sendEmailMock({
         //   subject,
@@ -109,12 +110,9 @@ export const useSubmitForm = () => {
         } else {
           setError(true);
         }
-        setCaptcha(null);
       } catch (error) {
-        console.log("entrei aqui");
         setError(true);
         setTimeout(() => {
-          setCaptcha(null);
           setError(false);
         }, 5000);
         console.error("Erro ao enviar e-mail:", error);
@@ -126,7 +124,6 @@ export const useSubmitForm = () => {
 
   return {
     handleSubmitForm,
-    setCaptcha,
     register,
     handleSubmit,
     setValue,
