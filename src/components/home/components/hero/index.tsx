@@ -17,7 +17,7 @@ export default function Hero() {
               width={887}
               height={424}
               loading="eager"
-              style={{ maxHeight: "300px", width: "auto" }}
+              className="max-h-[300px] w-auto mt-6 sm:mt-0"
               placeholder="blur"
               priority={process.env.NODE_ENV === "production"}
             />
