@@ -57,7 +57,7 @@ export default function Home() {
                 href="http://moccelinadvocacia.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lightApricotSalmon"
+                className="text-lightApricotSalmon hover:underline"
               >
                 moccelinadvocacia.com
               </a>
