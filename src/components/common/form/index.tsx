@@ -31,8 +31,9 @@ const Form = () => {
         onSubmit={handleSubmit(handleSubmitForm)}
         className="flex h-fit max-w-[350px] flex-col gap-4 items-start bg-lightApricotSalmon p-4 rounded-md text-md"
       >
-        <h3 className="text-center text-wrap font-poppins font-semibold text-white">
-          Deixe seu contato e falaremos com você!
+        <h3 className="text-center text-wrap font-poppins font-semibold text-white uppercase">
+          Deixe seu contato e um especialista vai guiá-lo até a solução ideal
+          para sua necessidade.
         </h3>
         <label
           htmlFor="name"
