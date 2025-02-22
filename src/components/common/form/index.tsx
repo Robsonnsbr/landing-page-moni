@@ -29,7 +29,7 @@ const Form = () => {
     >
       <form
         onSubmit={handleSubmit(handleSubmitForm)}
-        className="flex h-fit max-w-[350px] flex-col gap-4 items-start bg-lightApricotSalmon p-4 rounded-md text-md"
+        className="flex h-fit max-w-[350px] flex-col gap-4 shadow-md items-start bg-lightApricotSalmon p-4 rounded-md text-md"
       >
         <h3 className="text-center text-wrap font-poppins font-semibold text-white uppercase">
           Deixe seu contato e um especialista vai guiá-lo até a solução ideal
