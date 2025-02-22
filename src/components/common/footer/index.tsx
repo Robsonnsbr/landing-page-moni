@@ -13,7 +13,7 @@ const Footer = () => {
         className="overflow-visible my-10"
         id="container-top-footer"
       >
-        <ul className="w-full flex flex-col md:grid grid-cols-3 justify-between">
+        <ul className="w-full flex flex-col gap-10 md:grid grid-cols-3 justify-between">
           <li
             className="flex flex-col gap-4 items-center md:items-start"
             id="content-top-footer-contact"
@@ -80,17 +80,18 @@ const Footer = () => {
               <p className="text-lightApricotSalmon font-raleway">
                 <strong>Domingo:</strong> Fechado
               </p>
-              <div className="flex max-w-60 self-center md:self-end mt-4 md:mt-0 rounded-md  hover:scale-105 active:scale-100 active:border-white transition-all ease-linear duration-100">
+              <div className="flex flex-row max-w-60 self-center md:self-end mt-4 md:mt-0 rounded-md border-2 opacity-80 border-lightApricotSalmon hover:scale-105 hover:opacity-100 active:scale-100">
                 <Link
                   href="https://www.instagram.com/monimoccelin?igsh=MWFsbXN1cjh6aWsydw=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-fit"
+                  className="w-full"
                 >
                   <Image
                     src={moniInstagram}
                     width={300}
                     placeholder="blur"
+                    className="w-[240px] h-auto"
                     loading="lazy"
                     alt="imagem-monichara-linkedIn"
                   />

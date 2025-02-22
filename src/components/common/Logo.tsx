@@ -10,7 +10,7 @@ const Logo = () => (
     height={195}
     placeholder="blur"
     loading="lazy"
-    className="w-auto h-auto"
+    className="w-full max-w-[300px] h-auto"
   />
 );
 
