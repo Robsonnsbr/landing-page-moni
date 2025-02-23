@@ -4,18 +4,31 @@ import TaggBoxWidget from "./TaggBoxWidget";
 
 export default function Reviews() {
   return (
-    <div className="w-full flex flex-col sm:flex-row gap-6 items-center">
-      <TaggBoxWidget />
-      <Image
-        src={imageMonichara}
-        placeholder="blur"
-        loading="lazy"
-        priority={false}
-        alt="imagem Monichara advocada"
-        width={612}
-        height={918}
-        className="max-w-[300px] h-auto rounded-md border-2 border-lightApricotSalmon shadow-md"
-      />
-    </div>
+    <>
+      <div className="w-full flex flex-col sm:flex-row gap-6 items-center">
+        <TaggBoxWidget />
+        <Image
+          src={imageMonichara}
+          placeholder="blur"
+          loading="lazy"
+          priority={false}
+          alt="imagem Monichara advocada"
+          width={612}
+          height={918}
+          className="max-w-[300px] h-auto rounded-md border-2 border-lightApricotSalmon shadow-md"
+        />
+      </div>
+      <h3 className="text-xl text-deepIndigoBlue font-semibold text-center">
+        Para mais informações, acesse:{" "}
+        <a
+          href="http://moccelinadvocacia.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lightApricotSalmon hover:underline"
+        >
+          moccelinadvocacia.com
+        </a>
+      </h3>
+    </>
   );
 }

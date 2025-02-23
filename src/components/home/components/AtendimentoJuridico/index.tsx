@@ -21,14 +21,14 @@ export default function AtendimentoJuridico() {
           Atendimento Jurídico Exclusivo, Soluções Personalizadas
         </h3>
       </div>
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-6 ">
         {links.map(({ href, icon: Icon, text }, index) => (
           <Link
             key={`${href}-${index}`}
             href={href}
             target="_blank"
             rel="noopener nofollow"
-            className="flex-grow min-w-[200px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
+            className="flex-grow min-w-[200px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 hover:scale-105 transition-transform"
           >
             <div className="text-center p-6 bg-midBlack shadow-lg w-full rounded-md">
               <Icon

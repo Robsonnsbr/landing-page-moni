@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { data } from "@data/specialtiesContentData";
+import Line from "@components/common/svgs/Line";
 
 export default function Especialidades() {
   return (
@@ -15,11 +16,15 @@ export default function Especialidades() {
             key={category}
             className="flex-grow min-w-[200px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
           >
-            <div className=" text-center p-6 bg-LightGray shadow-md w-full rounded-md flex flex-col h-full">
+            <div className="relative text-center p-6 bg-LightGray shadow-md w-full rounded-md flex flex-col h-full hover:scale-105 transition-transform">
               <h2 className="text-2xl uppercase font-semibold text-lightApricotSalmon">
                 {category}
               </h2>
-              <ul className="mt-6 space-y-2 flex-grow ">
+              <Line position={{ left: "0px", top: "0px" }} />
+              <Line rotation={90} position={{ right: "0px", top: "0px" }} />
+              <Line rotation={180} position={{ right: "0px", bottom: "0px" }} />
+              <Line rotation={270} position={{ left: "0px", bottom: "0px" }} />
+              <ul className="mt-6 space-y-2 flex-grow flex flex-col  justify-center">
                 {services.map(({ title }) => (
                   <li key={title} className="flex flex-col">
                     <h3 className="font-semibold text-midBlack ">{title}</h3>

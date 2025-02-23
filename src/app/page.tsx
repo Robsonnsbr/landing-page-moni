@@ -51,17 +51,6 @@ export default function Home() {
         >
           <ContentContainer className="py-16 flex-col items-center gap-6">
             <Reviews />
-            <h3 className="text-xl text-deepIndigoBlue font-semibold text-center">
-              Para mais informações, acesse:{" "}
-              <a
-                href="http://moccelinadvocacia.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lightApricotSalmon hover:underline"
-              >
-                moccelinadvocacia.com
-              </a>
-            </h3>
           </ContentContainer>
         </SectionContainer>
         <hr className="border-2 w-full border-lightApricotSalmon" />
