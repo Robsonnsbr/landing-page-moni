@@ -30,6 +30,11 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://advogadocuritiba.moccelinadvocacia.com/"
+        />
+
         <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
