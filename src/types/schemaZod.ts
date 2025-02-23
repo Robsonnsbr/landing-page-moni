@@ -7,6 +7,7 @@ export const schemaZod = z
     option: z.enum(["email", "phone"], { message: "Opção é obrigatória!" }),
     email: z
       .string()
+      .min(3)
       .email({ message: "Email inválido!" })
       .or(z.literal(""))
       .optional(),
