@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { raleway, poppins, openSans } from "@font/index";
 import "./styles/globals.css";
 import ButtonWhatsappFloat from "@components/common/button/ButtonWhatsappFloat";
-// import GoogleAds from "@services/GoogleAds";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
@@ -63,7 +62,6 @@ export default function RootLayout({
       >
         {children}
         <GoogleAnalytics gaId="AW-16892245591" />
-        {/* <GoogleAds /> */}
         <ButtonWhatsappFloat />
       </body>
     </html>
