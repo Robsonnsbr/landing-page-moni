@@ -56,7 +56,7 @@ export const useSubmitForm = () => {
     const selectedOption = event.target.value as "email" | "phone";
     setOption(selectedOption);
     setValue("option", selectedOption);
-    console.log("Opção alterada para:", selectedOption);
+    // console.log("Opção alterada para:", selectedOption);
   };
 
   // Função para lidar com a mudança no campo de telefone e aplicar a máscara
