@@ -88,7 +88,6 @@ export const useSubmitForm = () => {
 
   const handleSubmitForm = async (data: EmailProps) => {
     const { subject, name, email, phone, option } = data;
-    sendEventGoogleAds();
 
     // Valida o reCAPTCHA antes de continuar
     const isValid = await validateRecaptcha();
@@ -107,6 +106,7 @@ export const useSubmitForm = () => {
         phone,
         option,
       });
+      sendEventGoogleAds();
 
       if (resultado === 200) {
         setIsWasSend(true);
