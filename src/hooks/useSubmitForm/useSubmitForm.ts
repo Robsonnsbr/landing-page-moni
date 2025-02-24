@@ -6,7 +6,7 @@ import { schemaZod } from "src/types/schemaZod";
 import { FormDataProps } from "src/types/types";
 import { sendEmail } from "@services/sendEmail";
 import { validateRecaptcha } from "@services/validateRecaptcha";
-import { reportConversion } from "@functions/reportConversion";
+import { sendEventGoogleAds } from "@functions/reportConversion";
 
 export const useSubmitForm = () => {
   const [isWasSend, setIsWasSend] = useState(false);
@@ -33,7 +33,6 @@ export const useSubmitForm = () => {
       email: "",
       phone: "",
       subject: "",
-      option: "phone",
     },
   });
 
@@ -56,12 +55,8 @@ export const useSubmitForm = () => {
   ) => {
     const selectedOption = event.target.value as "email" | "phone";
     setOption(selectedOption);
-
-    if (selectedOption === "email") {
-      setValue("phone", "");
-    } else {
-      setValue("email", "");
-    }
+    setValue("option", selectedOption);
+    console.log("Opção alterada para:", selectedOption);
   };
 
   // Função para lidar com a mudança no campo de telefone e aplicar a máscara
@@ -93,7 +88,7 @@ export const useSubmitForm = () => {
 
   const handleSubmitForm = async (data: EmailProps) => {
     const { subject, name, email, phone, option } = data;
-    reportConversion();
+    sendEventGoogleAds();
 
     // Valida o reCAPTCHA antes de continuar
     const isValid = await validateRecaptcha();

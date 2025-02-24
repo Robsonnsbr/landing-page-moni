@@ -18,7 +18,13 @@ export const schemaZod = z
       .optional(),
     subject: z.string().optional(),
   })
-  .refine((data) => (data.option === "email" ? !!data.email : !!data.phone), {
-    message: "Forneça um email ou telefone conforme a opção escolhida.",
-    path: ["email"], // O erro será atribuído ao email se a opção for 'email', e ao telefone caso contrário
-  });
+  .refine(
+    (data) => {
+      console.log("Dados recebidos:", data); // Aqui você vê o que está sendo validado
+      return data.option === "email" ? !!data.email : !!data.phone;
+    },
+    {
+      message: "Forneça um email ou telefone conforme a opção escolhida.",
+      path: ["email"],
+    }
+  );

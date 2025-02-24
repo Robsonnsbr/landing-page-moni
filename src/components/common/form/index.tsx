@@ -65,7 +65,7 @@ const Form = () => {
               {...register("option")}
               value="phone"
               className="hidden"
-              defaultChecked={option === "phone"}
+              checked={option === "phone"}
               onChange={(e) => handleOptionChange(e, setOption, setValue)}
             />
             <FaWhatsapp className="size-7 self-center" />
@@ -80,6 +80,7 @@ const Form = () => {
               {...register("option")}
               value="email"
               className="hidden"
+              checked={option === "email"}
               onChange={(e) => handleOptionChange(e, setOption, setValue)}
             />
             <MdOutlineEmail className="size-7 self-center" />
