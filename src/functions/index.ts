@@ -31,7 +31,7 @@ import { sendGAEvent } from "@next/third-parties/google";
 export function sendEventGoogleAds() {
   // Envia o evento de conversão para o Google Ads utilizando o sendGAEvent
   sendGAEvent("event", "conversion", {
-    send_to: "AW-16892245591/nu7eCPGxmaIaENfs7PY-",
+    send_to: "AW-16892245591/zC7ZCNOmzqIaENfs7PY-",
     value: 1.0,
     currency: "BRL",
   });
