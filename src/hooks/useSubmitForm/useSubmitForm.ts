@@ -83,44 +83,48 @@ export const useSubmitForm = () => {
   //   });
   // };
 
-  const handleSubmitForm = async (data: EmailProps) => {
-    reportConversion();
-    const { subject, name, email, phone, option } = data;
+  // const resultado = await sendEmailMock({
+  //   subject,
+  //   name,
+  //   email,
+  //   phone,
+  //   option,
+  // });
 
+  const handleSubmitForm = async (data: EmailProps) => {
+    const { subject, name, email, phone, option } = data;
+    reportConversion();
+
+    // Valida o reCAPTCHA antes de continuar
     const isValid = await validateRecaptcha();
 
     if (!isValid) {
-      try {
-        // const resultado = await sendEmailMock({
-        //   subject,
-        //   name,
-        //   email,
-        //   phone,
-        //   option,
-        // });
-        const resultado = await sendEmail({
-          subject,
-          name,
-          email,
-          phone,
-          option,
-        });
+      console.error("Erro ao validar o reCAPTCHA");
+      alert("Falha na verificação do reCAPTCHA. Tente novamente.");
+      return; // Não prossegue se o reCAPTCHA for inválido
+    }
 
-        if (resultado === 200) {
-          setIsWasSend(true);
-          reset();
-        } else {
-          setError(true);
-        }
-      } catch (error) {
+    try {
+      const resultado = await sendEmail({
+        subject,
+        name,
+        email,
+        phone,
+        option,
+      });
+
+      if (resultado === 200) {
+        setIsWasSend(true);
+        reset();
+      } else {
         setError(true);
-        setTimeout(() => {
-          setError(false);
-        }, 5000);
-        console.error("Erro ao enviar e-mail:", error);
       }
-    } else {
-      alert('Para continuar, clique em "Não sou um robô".');
+    } catch (error) {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
+      console.error("Erro ao enviar e-mail:", error);
     }
   };
 
