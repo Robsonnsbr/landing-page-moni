@@ -6,7 +6,7 @@ import { schemaZod } from "src/types/schemaZod";
 import { FormDataProps } from "src/types/types";
 import { sendEmail } from "@services/sendEmail";
 import { validateRecaptcha } from "@services/validateRecaptcha";
-import { sendEventGoogleAds } from "@functions/reportConversion";
+import { sendEventGoogleAds } from "@functions/index";
 
 export const useSubmitForm = () => {
   const [isWasSend, setIsWasSend] = useState(false);
