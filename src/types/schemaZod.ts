@@ -20,7 +20,6 @@ export const schemaZod = z
   })
   .refine(
     (data) => {
-      console.log("Dados recebidos:", data); // Aqui você vê o que está sendo validado
       return data.option === "email" ? !!data.email : !!data.phone;
     },
     {
