@@ -6,6 +6,7 @@ import { schemaZod } from "src/types/schemaZod";
 import { FormDataProps } from "src/types/types";
 import { sendEmail } from "@services/sendEmail";
 import { validateRecaptcha } from "@services/validateRecaptcha";
+import { reportConversion } from "@functions/reportConversion";
 
 export const useSubmitForm = () => {
   const [isWasSend, setIsWasSend] = useState(false);
@@ -83,6 +84,7 @@ export const useSubmitForm = () => {
   // };
 
   const handleSubmitForm = async (data: EmailProps) => {
+    reportConversion();
     const { subject, name, email, phone, option } = data;
 
     const isValid = await validateRecaptcha();
