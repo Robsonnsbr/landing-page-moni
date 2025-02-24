@@ -4,6 +4,7 @@ import { raleway, poppins, openSans } from "@font/index";
 import "./styles/globals.css";
 
 import ButtonWhatsappFloat from "@components/common/button/ButtonWhatsappFloat";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Moccelin Advocacia",
@@ -57,6 +58,24 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon.ico" />
+        {/* Google Tag Script */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16892245591"
+          async
+        />
+        <Script
+          strategy="afterInteractive"
+          id="google-ads-script"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16892245591');
+          `,
+          }}
+        />
       </head>
       <body
         suppressHydrationWarning={true}
