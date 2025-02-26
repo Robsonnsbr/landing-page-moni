@@ -5,15 +5,19 @@ import ButtonWhatsappFloat from "@components/common/button/ButtonWhatsappFloat";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  title: "Moccelin Advocacia",
-  description: `Contrate um advogado com rapidez e segurança! Oferecemos consultoria 
-  jurídica online e soluções eficazes para resolver seu problema com 
-  agilidade e total transparência.`,
+  title: "Moccelin Advocacia | Advogada em Curitiba",
+  description: `Precisa de um advogado em Curitiba? Atendimento rápido e seguro! 
+  Oferecemos consultoria jurídica online e soluções eficazes para resolver seu problema 
+  com agilidade e total transparência.`,
 
-  keywords: `[consulta juridica], [contratar advogado], 
-[preciso de advogado], [consultoria juridica online], 
-[advogado whatsapp], [preciso de um advogado], [site de advogado], 
-[advogado telefone], [telefone advogado], [advogado contratos]`,
+  keywords: `[adv curitiba], [advogado curitiba], [consulta jurídica curitiba], [contratar advogado curitiba], 
+[preciso de advogado curitiba], [consultoria jurídica online curitiba], [advogado curitiba whatsapp], 
+[preciso de um advogado curitiba], [site de advogado curitiba], [advogado telefone curitiba], 
+[telefone advogado curitiba], [advogado contratos curitiba], [melhor advogado curitiba], 
+[advogado especialista curitiba], [advogado trabalhista curitiba], [advogado cível curitiba], 
+[advogado empresarial curitiba], [advogado de confiança curitiba], [atendimento jurídico curitiba], 
+[assessoria jurídica curitiba], [advogado urgente curitiba], [advogado online curitiba]`,
+
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
