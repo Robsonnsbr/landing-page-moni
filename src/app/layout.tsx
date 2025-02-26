@@ -7,14 +7,13 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 export const metadata: Metadata = {
   title: "Moccelin Advocacia",
   description: `Contrate um advogado com rapidez e segurança! Oferecemos consultoria 
-                  jurídica online e soluções eficazes para resolver seu problema com 
-                  agilidade e total transparência.`,
+  jurídica online e soluções eficazes para resolver seu problema com 
+  agilidade e total transparência.`,
 
   keywords: `[consulta juridica], [contratar advogado], 
-  [preciso de advogado], [consultoria juridica online], 
-  [advogado whatsapp], [preciso de um advogado], [site de advogado], 
-  [advogado telefone], [telefone advogado], [advogado contratos]`
-};
+[preciso de advogado], [consultoria juridica online], 
+[advogado whatsapp], [preciso de um advogado], [site de advogado], 
+[advogado telefone], [telefone advogado], [advogado contratos]`,
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
