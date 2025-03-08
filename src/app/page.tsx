@@ -10,6 +10,7 @@ import {
   Reviews,
 } from "@components/home/index";
 import ContentContainer from "@components/common/containers/ContentContainer";
+import Info from "@components/home/components/info";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         id="hero-section"
         className="bg-hero-section bg-cover bg-center"
       >
+        <Info />
         <Hero />
       </SectionContainer>
 
