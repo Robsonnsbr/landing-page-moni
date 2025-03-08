@@ -10,7 +10,7 @@ function Info() {
 
         <li className="flex flex-wrap justify-center  items-center gap-4 m-auto">
           <a
-            href="https://api.whatsapp.com/send/?phone=5541998083760"
+            href="https://api.whatsapp.com/send/?phone=554198083760"
             className="flex items-center gap-2"
           >
             <FaWhatsapp className="text-xl" />
