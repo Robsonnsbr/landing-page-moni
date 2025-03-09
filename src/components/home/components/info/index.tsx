@@ -5,7 +5,7 @@ import { MdOutlinePhoneCallback } from "react-icons/md";
 
 function Info() {
   return (
-    <div className="bg-deepIndigoBlue h-fit px-1 py-2 w-full flex justify-center">
+    <div className="bg-deepIndigoBlue h-fit px-1 py-2 w-full flex justify-center fixed top-0 left-0 z-50 shadow-md">
       <ul className="flex flex-wrap items-center gap-2 text-lightApricotSalmon text-base font-openSans text-center m-auto">
         <li className="w-full md:w-auto">Atendimento rápido e online:</li>
 

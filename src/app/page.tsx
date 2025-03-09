@@ -15,12 +15,12 @@ import Info from "@components/home/components/info";
 export default function Home() {
   return (
     <>
+      <Info />
       <SectionContainer
         role="banner"
         id="hero-section"
         className="bg-hero-section bg-cover bg-center"
       >
-        <Info />
         <Hero />
       </SectionContainer>
 
