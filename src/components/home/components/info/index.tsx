@@ -1,3 +1,4 @@
+import { sendEventGoogleAds } from "@functions/index";
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlinePhoneCallback } from "react-icons/md";
@@ -14,6 +15,7 @@ function Info() {
             rel="noopener noreferrer"
             target="_blank"
             className="flex items-center gap-2"
+            onClick={sendEventGoogleAds}
           >
             <FaWhatsapp className="text-xl" />
             <span>WhatsApp</span>
@@ -23,9 +25,8 @@ function Info() {
         <li className="flex flex-wrap justify-center  items-center gap-4 m-auto">
           <a
             href="tel:41999483760"
-            rel="noopener noreferrer"
-            target="_blank"
             className="flex items-center gap-2"
+            onClick={sendEventGoogleAds}
           >
             <MdOutlinePhoneCallback className="text-xl" />
             <span>(41) 99948-3760</span>
