@@ -19,7 +19,7 @@ export default function Home() {
       <SectionContainer
         role="banner"
         id="hero-section"
-        className="bg-hero-section bg-cover bg-center"
+        className="bg-hero-section bg-cover bg-center pt-20 md:pt-10"
       >
         <Hero />
       </SectionContainer>
