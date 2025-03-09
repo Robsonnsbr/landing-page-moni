@@ -11,6 +11,8 @@ function Info() {
         <li className="flex flex-wrap justify-center  items-center gap-4 m-auto">
           <a
             href="https://api.whatsapp.com/send/?phone=554198083760"
+            rel="noopener noreferrer"
+            target="_blank"
             className="flex items-center gap-2"
           >
             <FaWhatsapp className="text-xl" />
@@ -19,7 +21,12 @@ function Info() {
         </li>
 
         <li className="flex flex-wrap justify-center  items-center gap-4 m-auto">
-          <a href="tel:41999483760" className="flex items-center gap-2">
+          <a
+            href="tel:41999483760"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="flex items-center gap-2"
+          >
             <MdOutlinePhoneCallback className="text-xl" />
             <span>(41) 99948-3760</span>
           </a>
