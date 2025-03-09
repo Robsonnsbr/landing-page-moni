@@ -18,7 +18,7 @@ export default function AtendimentoJuridico() {
     <>
       <div>
         <h3 className="text-3xl font-extrabold text-center text-lightApricotSalmon uppercase">
-          Atendimento Jurídico Exclusivo, Soluções Personalizadas
+          Por que escolher nossos serviços?
         </h3>
       </div>
       <div className="flex flex-wrap justify-center gap-6 ">
