@@ -1,6 +1,8 @@
 import ButtonWhatsapp from "@components/common/button/ButtonWhatsapp";
 import Line from "@components/common/svgs/Line";
 import Link from "next/link";
+import Image from "next/image";
+import imageMonichara from "@public/images/mochara-imagem2.webp";
 
 export default function About() {
   const info = {
@@ -31,60 +33,72 @@ export default function About() {
           {info.oab}
         </p>
       </div>
-      <ul className="flex flex-wrap justify-center gap-6 w-full">
-        {[
-          { title: "Formação", items: info.formacao },
-          // { title: "Experiência", items: info.experiencia },
-          { title: "Cursos", items: info.cursos },
-        ].map((section, index) => (
-          <li
-            key={index}
-            className="relative flex-grow min-w-[280px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 max-w-[390px] hover:scale-105 transition-transform"
-          >
-            <Line
-              position={{ left: "0px", top: "0px" }}
-              className="!fill-lightApricotSalmon"
-            />
-            <Line
-              rotation={90}
-              position={{ right: "0px", top: "0px" }}
-              className="!fill-lightApricotSalmon"
-            />
-            <Line
-              rotation={180}
-              position={{ right: "0px", bottom: "0px" }}
-              className="!fill-lightApricotSalmon"
-            />
-            <Line
-              rotation={270}
-              position={{ left: "0px", bottom: "0px" }}
-              className="!fill-lightApricotSalmon"
-            />
-            <div className="text-center p-6 bg-midBlack shadow-lg rounded-md flex flex-col h-full ">
-              <h2 className="text-2xl font-semibold text-lightApricotSalmon">
-                {section.title}
-              </h2>
+      <div className="flex flex-wrap justify-center gap-6">
+        <Image
+          src={imageMonichara}
+          placeholder="blur"
+          loading="lazy"
+          priority={false}
+          alt="segunda imagem Monichara advocada"
+          width={612}
+          height={918}
+          className="max-w-[300px] h-auto rounded-md border-2 border-lightApricotSalmon shadow-md"
+        />
+        <ul className="flex flex-wrap justify-center gap-6">
+          {[
+            { title: "Formação", items: info.formacao },
+            // { title: "Experiência", items: info.experiencia },
+            { title: "Cursos", items: info.cursos },
+          ].map((section, index) => (
+            <li
+              key={index}
+              className="relative flex-grow min-w-[280px] w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 max-w-[390px] hover:scale-105 transition-transform"
+            >
+              <Line
+                position={{ left: "0px", top: "0px" }}
+                className="!fill-lightApricotSalmon"
+              />
+              <Line
+                rotation={90}
+                position={{ right: "0px", top: "0px" }}
+                className="!fill-lightApricotSalmon"
+              />
+              <Line
+                rotation={180}
+                position={{ right: "0px", bottom: "0px" }}
+                className="!fill-lightApricotSalmon"
+              />
+              <Line
+                rotation={270}
+                position={{ left: "0px", bottom: "0px" }}
+                className="!fill-lightApricotSalmon"
+              />
+              <div className="text-center p-6 bg-midBlack shadow-lg rounded-md flex flex-col h-full ">
+                <h2 className="text-2xl font-semibold text-lightApricotSalmon">
+                  {section.title}
+                </h2>
 
-              <ul className="mt-6 space-y-2 flex-grow flex flex-col justify-center ">
-                {section.items.map((item, idx) => (
-                  <li key={idx} className="px-4 text-white font-semibold">
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                <ul className="mt-6 space-y-2 flex-grow flex flex-col justify-center ">
+                  {section.items.map((item, idx) => (
+                    <li key={idx} className="px-4 text-white font-semibold">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
 
-              <Link
-                href="https://moccelinadvocacia.com/#ref-resumo-sobre"
-                target="_blank"
-                rel="noopener"
-                className="py-6 px-4 text-success font-openSans font-semibold hover:underline"
-              >
-                Saiba mais
-              </Link>
-            </div>
-          </li>
-        ))}
-      </ul>
+                <Link
+                  href="https://moccelinadvocacia.com/#ref-resumo-sobre"
+                  target="_blank"
+                  rel="noopener"
+                  className="py-6 px-4 text-success font-openSans font-semibold hover:underline"
+                >
+                  Saiba mais
+                </Link>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
       <ButtonWhatsapp label={"QUERO FALAR AGORA COM UM ADVOGADO"} />
     </>
   );

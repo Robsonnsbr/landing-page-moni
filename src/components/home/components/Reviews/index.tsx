@@ -5,6 +5,9 @@ import TaggBoxWidget from "./TaggBoxWidget";
 export default function Reviews() {
   return (
     <>
+      <h3 className="text-3xl font-extrabold text-center uppercase text-deepIndigoBlue font-poppins">
+        Excelência reconhecida: temos 5 estrelas no Google!
+      </h3>
       <div className="w-full flex flex-col sm:flex-row gap-6 items-center">
         <TaggBoxWidget />
         <Image
