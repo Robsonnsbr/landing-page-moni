@@ -24,7 +24,7 @@ const Footer = () => {
             </h3>
             <div className="md:mb-7">
               <p className="text-lightApricotSalmon font-raleway">
-                <strong>Telefone/Whatsapp:</strong>{" "}
+                <strong>Whatsapp:</strong>{" "}
                 <a
                   className="animate-pulse"
                   href="https://api.whatsapp.com/send/?phone=554198083760"
