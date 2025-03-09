@@ -19,7 +19,7 @@ export default function Home() {
       <SectionContainer
         role="banner"
         id="hero-section"
-        className="bg-hero-section bg-cover bg-center pt-20 md:pt-10"
+        className="bg-hero-section-mobile sm:bg-hero-section bg-cover bg-center pt-20 md:pt-10 transition-all duration-500"
       >
         <Hero />
       </SectionContainer>

@@ -44,6 +44,7 @@ export default {
       },
       backgroundImage: {
         "hero-section": 'url("/background/background-hero.webp")',
+        "hero-section-mobile": 'url("/background/background-hero-mobile.webp")',
       },
     },
   },
